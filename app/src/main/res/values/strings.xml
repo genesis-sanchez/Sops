@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Sops</string>
+    <string name="app_name">Mascotitas Sops</string>
+    <string name="title_main">Inicio - Mascotitas Sops</string>
+    <string name="title_registro_mascota">Registrar Mascota</string>
+    <string name="title_lista_mascotas">Mis Mascotas</string>
+    <string name="btn_ir_registro">Registrar Mascota</string>
+    <string name="btn_ir_lista">Ver Listado</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="hint_nombre">Nombre de la mascota</string>
+    <string name="hint_raza">Raza</string>
+    <string name="msg_campos_vacios">Completa todos los campos obligatorios</string>
+    <string name="msg_exito">Registro guardado exitosamente</string>
 </resources>
