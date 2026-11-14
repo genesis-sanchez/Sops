@@ -1,9 +1,30 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Sops" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <style name="Base.Theme.Sops" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/sops_principal</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/sops_secundario</item>
+        <item name="android:windowBackground">@color/sops_fondo</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
-
     <style name="Theme.Sops" parent="Base.Theme.Sops" />
+    <style name="Sops.Descripcion" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/sops_texto_secundario</item>
+    </style>
+    <style name="Sops.TituloSeccion" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/sops_texto</item>
+    </style>
+    <style name="Sops.Tarjeta" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardBackgroundColor">@color/sops_superficie</item>
+        <item name="strokeColor">@color/sops_borde</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
 </resources>

@@ -1,4 +1,12 @@
 <resources>
+    <string name="inicio_bienvenida">Su bienestar empieza contigo</string>
+    <string name="inicio_descripcion">Un espacio para acompañar el cuidado de tus mascotas y tener su información a mano.</string>
+    <string name="inicio_mascotas_titulo">Mis mascotas</string>
+    <string name="inicio_mascotas_descripcion">Conoce a cada compañero: sus datos, su especie y lo que lo hace especial.</string>
+    <string name="inicio_vacunas_titulo">Vacunas al día</string>
+    <string name="inicio_vacunas_descripcion">Consulta sus vacunas y las próximas fechas de aplicación.</string>
+    <string name="inicio_cuidados_titulo">Cuidados que acompañan</string>
+    <string name="inicio_cuidados_descripcion">Salud, alimentación y consejos reunidos en un solo lugar.</string>
     <string name="app_name">Mascotitas Sops</string>
     <string name="title_main">Inicio - Mascotitas Sops</string>
     <string name="title_registro_mascota">Registrar Mascota</string>

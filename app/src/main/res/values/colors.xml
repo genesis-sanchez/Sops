@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="sops_principal">#246B59</color>
+    <color name="sops_secundario">#8C542F</color>
+    <color name="sops_fondo">#F5F8F5</color>
+    <color name="sops_superficie">#FFFFFF</color>
+    <color name="sops_texto">#203D34</color>
+    <color name="sops_texto_secundario">#52645C</color>
+    <color name="sops_borde">#DCE7DF</color>
 </resources>

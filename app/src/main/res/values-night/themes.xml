@@ -1,7 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Sops" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-    </style>
+<resources>
+    <!-- La primera versión mantiene una paleta clara en todos los dispositivos. -->
+    <style name="Theme.Sops" parent="Base.Theme.Sops" />
 </resources>
