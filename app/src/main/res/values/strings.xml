@@ -1,4 +1,18 @@
 <resources>
+    <string name="btn_ver_mascotas">Ver mis mascotas</string>
+    <string name="lista_descripcion">Cada compañero tiene su historia</string>
+    <string name="lista_indicacion">Toca una mascota para conocer sus datos.</string>
+    <string name="datos_ejemplo">Mascotas de ejemplo · Hito 1</string>
+    <string name="mascota_resumen">%1$s · %2$s</string>
+    <string name="detalle_titulo">Ficha de mascota</string>
+    <string name="detalle_datos">Conoce a tu compañero</string>
+    <string name="label_especie">Especie</string>
+    <string name="label_edad">Edad</string>
+    <string name="label_sexo">Sexo</string>
+    <string name="label_esterilizado">¿Está esterilizado?</string>
+    <string name="respuesta_si">Sí</string>
+    <string name="respuesta_no">No</string>
+    <string name="volver">Volver</string>
     <string name="inicio_bienvenida">Su bienestar empieza contigo</string>
     <string name="inicio_descripcion">Un espacio para acompañar el cuidado de tus mascotas y tener su información a mano.</string>
     <string name="inicio_mascotas_titulo">Mis mascotas</string>

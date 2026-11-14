@@ -27,4 +27,12 @@
         <item name="strokeColor">@color/sops_borde</item>
         <item name="strokeWidth">1dp</item>
     </style>
+    <style name="Sops.EtiquetaDato" parent="Sops.Descripcion">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Sops.ValorDato" parent="Sops.TituloSeccion">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <ImageView
+                android:layout_width="72dp" android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_huella" android:importantForAccessibility="no" />
+            <TextView android:id="@+id/tvNombreDetalle" style="@style/Sops.TituloSeccion"
+                android:textSize="32sp" android:gravity="center" android:layout_marginTop="16dp" />
+            <TextView android:id="@+id/tvRazaDetalle" style="@style/Sops.Descripcion"
+                android:gravity="center" android:layout_marginTop="8dp" />
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Sops.Tarjeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="28dp">
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/detalle_datos" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_especie" />
+                    <TextView android:id="@+id/tvEspecieDetalle" style="@style/Sops.ValorDato" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_edad" />
+                    <TextView android:id="@+id/tvEdadDetalle" style="@style/Sops.ValorDato" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_sexo" />
+                    <TextView android:id="@+id/tvSexoDetalle" style="@style/Sops.ValorDato" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_esterilizado" />
+                    <TextView android:id="@+id/tvEsterilizadoDetalle" style="@style/Sops.ValorDato" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView style="@style/Sops.Descripcion" android:layout_marginTop="20dp"
+                android:textSize="13sp" android:text="@string/datos_ejemplo" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

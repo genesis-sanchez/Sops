@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <TextView style="@style/Sops.TituloSeccion" android:text="@string/lista_descripcion" />
+        <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+            android:text="@string/lista_indicacion" />
+        <TextView style="@style/Sops.Descripcion" android:layout_marginTop="12dp"
+            android:textSize="13sp" android:text="@string/datos_ejemplo" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMascotas"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:clipToPadding="false"
+        android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingBottom="24dp" />
+</LinearLayout>

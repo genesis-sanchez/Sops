@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sops">
+        <activity android:name=".controller.ListaMascotasActivity" android:exported="false" />
+        <activity android:name=".controller.DetalleMascotaActivity" android:exported="false" />
         <activity
             android:name=".controller.MainActivity"
             android:exported="true">
