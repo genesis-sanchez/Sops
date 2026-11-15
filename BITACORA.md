@@ -95,3 +95,11 @@
 **dificultad:** abrirla desde los tres puntos.
 
 **solucion:** agregue la opcion al menu y use un intent.
+
+## 15 de noviembre de 2026 - revision
+
+**avance:** probe el menu, las pantallas y los formularios en el emulador.
+
+**dificultad:** comprobar que los datos lleguen a la mascota elegida.
+
+**solucion:** revise los recorridos y el envio de formularios con seis pruebas. todas pasaron.
