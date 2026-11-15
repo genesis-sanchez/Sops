@@ -31,3 +31,11 @@
 **dificultad:** las mascotas recien ingresadas no deben recibir las vacunas de ejemplo de las otras mascotas.
 
 **solucion:** se pasa tambien el aviso de registro de prueba y para esas mascotas se muestra la lista vacia. los ejemplos siguen en el modelo y el formulario de vacunas queda para el siguiente avance.
+
+## 15 de noviembre de 2026 - formulario de vacunas
+
+**avance:** agregue la vista del formulario y su acceso desde la lista de vacunas con un intent.
+
+**dificultad:** mostrar en el formulario la mascota seleccionada.
+
+**solucion:** pase la mascota con putExtra. el formulario muestra una confirmacion de ejemplo sin guardar datos.

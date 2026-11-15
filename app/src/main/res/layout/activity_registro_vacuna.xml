@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/tvMascotaRegistroVacuna" style="@style/Sops.TituloSeccion" />
+            <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+                android:text="@string/vacuna_form_aviso" />
+
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/nombre_vacuna" />
+            <EditText android:id="@+id/etNombreVacuna" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="textCapSentences"
+                android:hint="@string/hint_vacuna" android:maxLength="80" android:maxLines="1"
+                android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/numero_dosis" android:labelFor="@id/spDosis" />
+            <Spinner android:id="@+id/spDosis" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:spinnerMode="dropdown" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/fecha_vacuna" />
+
+            <EditText android:id="@+id/etFechaAplicacion" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:inputType="date" android:hint="@string/hint_fecha_vacuna"
+                android:maxLength="10" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/proxima_vacuna" />
+            <EditText android:id="@+id/etProximaFecha" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:inputType="date" android:hint="@string/hint_fecha_vacuna"
+                android:maxLength="10" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/veterinario" />
+
+            <EditText android:id="@+id/etVeterinario" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="textCapWords"
+                android:hint="@string/hint_veterinario" android:maxLength="100" android:maxLines="1"
+                android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/observaciones_vacuna" />
+            <EditText android:id="@+id/etObservacionesVacuna" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="96dp" android:gravity="top|start"
+                android:inputType="textCapSentences|textMultiLine" android:hint="@string/hint_observaciones"
+                android:maxLength="500" android:importantForAutofill="no" />
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/swRecordatorioVacuna"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp"
+                android:layout_marginTop="20dp" android:text="@string/recordatorio_vacuna" />
+            <TextView style="@style/Sops.Descripcion" android:textSize="13sp" android:text="@string/recordatorio_demo" />
+            <TextView android:id="@+id/tvErrorVacuna" style="@style/Sops.Descripcion"
+                android:layout_marginTop="16dp" android:textColor="?attr/colorError"
+                android:accessibilityLiveRegion="polite" android:visibility="gone" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEnviarVacuna"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp"
+                android:layout_marginTop="24dp" android:text="@string/enviar_vacuna" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

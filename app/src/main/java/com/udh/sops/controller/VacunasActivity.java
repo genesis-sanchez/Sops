@@ -1,6 +1,7 @@
 package com.udh.sops.controller;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 import androidx.core.content.IntentCompat;
@@ -21,6 +22,11 @@ public class VacunasActivity extends BaseActivity {
         Mascota mascota = IntentCompat.getSerializableExtra(getIntent(),
                 DetalleMascotaActivity.EXTRA_MASCOTA, Mascota.class);
         if (mascota == null) { finish(); return; }
+        findViewById(R.id.btnRegistrarVacuna).setOnClickListener(view -> {
+            Intent intent = new Intent(this, RegistroVacunaActivity.class);
+            intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
+            startActivity(intent);
+        });
         ((TextView) findViewById(R.id.tvMascotaVacunas)).setText(
                 getString(R.string.vacunas_de, mascota.getNombre()));
         boolean nueva = getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false);

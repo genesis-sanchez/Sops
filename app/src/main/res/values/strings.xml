@@ -1,8 +1,32 @@
 <resources>
+    <string name="registrar_vacuna">registrar vacuna</string>
+    <string name="vacuna_form_aviso">datos de la vacuna aplicada. no se guardaran.</string>
+    <string name="nombre_vacuna">nombre de la vacuna</string>
+    <string name="hint_vacuna">por ejemplo: antirrabica</string>
+    <string name="numero_dosis">numero de dosis</string>
+    <string name="fecha_vacuna">fecha de aplicacion</string>
+    <string name="proxima_vacuna">proxima fecha</string>
+    <string name="veterinario">veterinario o clinica</string>
+    <string name="hint_veterinario">por ejemplo: veterinaria patitas</string>
+    <string name="observaciones_vacuna">observaciones (opcional)</string>
+    <string name="hint_observaciones">anota algun detalle de la visita</string>
+    <string name="recordatorio_vacuna">recordar la proxima vacuna</string>
+    <string name="recordatorio_demo">solo de ejemplo, sin notificaciones.</string>
+    <string name="enviar_vacuna">enviar y revisar</string>
+    <string name="error_form_vacuna">completa los campos y selecciona la dosis.</string>
+    <string name="hint_fecha_vacuna">dd/mm/aaaa</string>
+    <string name="vacuna_confirmacion_titulo">datos de la vacuna</string>
+    <string name="vacuna_confirmacion">mascota: %1$s\nvacuna: %2$s\ndosis: %3$s\naplicacion: %4$s\nproxima fecha: %5$s\nveterinario: %6$s\nobservaciones: %7$s\nrecordatorio de ejemplo: %8$s\n\ndatos no guardados. sin notificaciones.</string>
+    <string name="sin_observaciones">sin observaciones</string>
+    <string name="volver_formulario">volver al formulario</string>
+    <string-array name="dosis_vacuna">
+        <item>selecciona una dosis</item>
+        <item>1</item><item>2</item><item>3</item><item>4</item><item>5</item>
+    </string-array>
     <string name="vacunas_titulo">Vacunas</string>
     <string name="ver_vacunas">Ver vacunas</string>
     <string name="vacunas_de">Vacunas de %1$s</string>
-    <string name="vacunas_demo">Datos y fechas de ejemplo · Hito 1</string>
+    <string name="vacunas_demo">datos y fechas de ejemplo</string>
     <string name="vacuna_aplicada">aplicada</string>
     <string name="vacuna_pendiente">pendiente</string>
     <string name="fecha_aplicada">aplicacion</string>
@@ -10,7 +34,7 @@
     <string name="vacuna_fechas">dosis: %1$d\n%2$s: %3$s\nproxima fecha: %4$s</string>
     <string name="sin_vacunas">Esta mascota todavía no tiene vacunas para mostrar.</string>
     <string name="registro_intro">Cuéntanos sobre tu mascota</string>
-    <string name="registro_aviso">Completa todos los datos. En esta demostración podrás revisar la ficha, pero la mascota no se guardará en la lista.</string>
+    <string name="registro_aviso">completa los datos. no se guardaran.</string>
     <string name="label_nombre">Nombre</string>
     <string name="label_raza">Raza</string>
     <string name="label_peso">Peso (kg)</string>
@@ -25,7 +49,7 @@
     <string name="error_obligatorio">Completa este campo</string>
     <string name="error_peso">Ingresa un peso mayor que cero</string>
     <string name="error_registro">Revisa los campos y selecciona la especie, el sexo y la fecha de nacimiento.</string>
-    <string name="confirmacion_demo">Formulario enviado correctamente. Esta ficha es una vista previa: los datos no se guardaron. Puedes volver para corregirlos.</string>
+    <string name="confirmacion_demo">vista previa. datos no guardados.</string>
     <string name="peso_kg">%1$s kg</string>
     <string name="menor_un_anio">Menos de 1 año</string>
     <plurals name="edad_anios">
