@@ -22,6 +22,12 @@ public class DetalleMascotaActivity extends BaseActivity {
             return;
         }
         mostrar(R.id.tvNombreDetalle, mascota.getNombre());
+        findViewById(R.id.btnHistorialMascota).setOnClickListener(view -> {
+            Intent intent = new Intent(this, HistorialMedicoActivity.class);
+            intent.putExtra(EXTRA_MASCOTA, mascota);
+            intent.putExtra(EXTRA_REGISTRO_DEMO, getIntent().getBooleanExtra(EXTRA_REGISTRO_DEMO, false));
+            startActivity(intent);
+        });
         findViewById(R.id.btnVacunasMascota).setOnClickListener(view -> {
             Intent intent = new Intent(this, VacunasActivity.class);
             intent.putExtra(EXTRA_MASCOTA, mascota);

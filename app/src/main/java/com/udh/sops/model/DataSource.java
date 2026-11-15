@@ -4,6 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataSource {
+    public static List<RegistroMedico> getHistorialEjemplo(Mascota mascota) {
+        List<RegistroMedico> lista = new ArrayList<>();
+        lista.add(new RegistroMedico("12/11/2026", "control de tratamiento",
+                "veterinaria patitas", "seguimiento de " + mascota.getNombre()
+                + ". se reviso su evolucion y se agendo el siguiente control."));
+        lista.add(new RegistroMedico("05/11/2026", "visita veterinaria",
+                "veterinaria patitas", "revision general de " + mascota.getNombre()
+                + " y control de peso."));
+        return lista;
+    }
+
     public static List<Vacuna> getVacunasEjemplo(Mascota mascota) {
         List<Vacuna> lista = new ArrayList<>();
         if ("Perro".equals(mascota.getTipo())) {

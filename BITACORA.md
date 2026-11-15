@@ -55,3 +55,11 @@
 **dificultad:** abrir la pantalla desde el menu.
 
 **solucion:** puse consejos en los tres puntos y lo abri con un intent.
+
+## 15 de noviembre de 2026 - historial medico
+
+**avance:** agregue la vista del historial con dos registros de ejemplo.
+
+**dificultad:** mostrar a que mascota pertenece el historial.
+
+**solucion:** pase la mascota con un intent y mostre su nombre en la pantalla.

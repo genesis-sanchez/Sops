@@ -1,4 +1,8 @@
 <resources>
+    <string name="historial_titulo">historial medico</string>
+    <string name="historial_de">historial de %1$s</string>
+    <string name="historial_ejemplo">visitas y tratamientos</string>
+    <string name="sin_historial">esta mascota aun no tiene registros medicos.</string>
     <string name="consejos_titulo">consejos</string>
     <string name="consejos_encabezado">pequenos cuidados diarios</string>
     <string name="consejos_intro">algunos ejemplos para perros y gatos.</string>

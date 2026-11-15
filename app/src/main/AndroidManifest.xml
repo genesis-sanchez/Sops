@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sops">
+        <activity android:name=".controller.HistorialMedicoActivity" android:exported="false" />
         <activity android:name=".controller.ConsejosActivity" android:exported="false" />
         <activity android:name=".controller.RegistroVacunaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".controller.VacunasActivity" android:exported="false" />
