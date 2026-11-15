@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Sops.Tarjeta" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:id="@+id/tvNombreVacuna" style="@style/Sops.TituloSeccion" />
+        <TextView android:id="@+id/tvEstadoVacuna" style="@style/Sops.Descripcion"
+            android:textColor="@color/sops_principal" android:textStyle="bold" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/tvFechasVacuna" style="@style/Sops.Descripcion"
+            android:layout_marginTop="12dp" android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

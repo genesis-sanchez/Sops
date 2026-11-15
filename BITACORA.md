@@ -23,3 +23,11 @@
 **Dificultad:** Había que mostrar los datos enviados sin mezclarlos con las cinco mascotas de ejemplo, y permitir completar el formulario aunque el teclado ocupe parte de la pantalla.
 
 **Solución:** Se reutilizó la ficha recibiendo la mascota con `putExtra` y un aviso de demostración. El formulario se puede desplazar y se ajusta al espacio del teclado. Se validan los campos, el peso positivo y las selecciones; el calendario impide elegir fechas futuras.
+
+## 15 de noviembre de 2026 - lista de vacunas
+
+**avance:** agregue la pantalla de vacunas y el boton para abrirla desde la ficha. muestra nombre, dosis, fechas y si esta aplicada o pendiente.
+
+**dificultad:** las mascotas recien ingresadas no deben recibir las vacunas de ejemplo de las otras mascotas.
+
+**solucion:** se pasa tambien el aviso de registro de prueba y para esas mascotas se muestra la lista vacia. los ejemplos siguen en el modelo y el formulario de vacunas queda para el siguiente avance.

@@ -1,4 +1,14 @@
 <resources>
+    <string name="vacunas_titulo">Vacunas</string>
+    <string name="ver_vacunas">Ver vacunas</string>
+    <string name="vacunas_de">Vacunas de %1$s</string>
+    <string name="vacunas_demo">Datos y fechas de ejemplo · Hito 1</string>
+    <string name="vacuna_aplicada">aplicada</string>
+    <string name="vacuna_pendiente">pendiente</string>
+    <string name="fecha_aplicada">aplicacion</string>
+    <string name="fecha_programada">programada para</string>
+    <string name="vacuna_fechas">dosis: %1$d\n%2$s: %3$s\nproxima fecha: %4$s</string>
+    <string name="sin_vacunas">Esta mascota todavía no tiene vacunas para mostrar.</string>
     <string name="registro_intro">Cuéntanos sobre tu mascota</string>
     <string name="registro_aviso">Completa todos los datos. En esta demostración podrás revisar la ficha, pero la mascota no se guardará en la lista.</string>
     <string name="label_nombre">Nombre</string>
