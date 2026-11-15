@@ -103,3 +103,11 @@
 **dificultad:** comprobar que los datos lleguen a la mascota elegida.
 
 **solucion:** revise los recorridos y el envio de formularios con seis pruebas. todas pasaron.
+
+## 15 de noviembre de 2026 - capturas
+
+**avance:** guarde 16 capturas de las pantallas y del menu en evidencias/capturas.
+
+**dificultad:** algunas pantallas no entran completas en una imagen.
+
+**solucion:** tome otra captura de la parte inferior para mostrar los campos y datos que faltaban.
