@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/tvMascotaVisita" style="@style/Sops.TituloSeccion" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/fecha_visita" />
+            <EditText android:id="@+id/etFechaVisita" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="date"
+                android:hint="@string/hint_fecha_vacuna" android:maxLength="10" android:importantForAutofill="no" />
+            <TextView android:id="@+id/tvMotivoVisita" style="@style/Sops.EtiquetaDato"
+                android:text="@string/motivo_visita" android:labelFor="@id/spMotivoVisita" />
+            <Spinner android:id="@+id/spMotivoVisita" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:spinnerMode="dropdown" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/diagnostico_visita" />
+            <EditText android:id="@+id/etDiagnostico" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="64dp" android:inputType="textMultiLine"
+                android:hint="@string/hint_diagnostico" android:maxLength="300" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/tratamiento_visita" />
+            <EditText android:id="@+id/etTratamiento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="64dp" android:inputType="textMultiLine"
+                android:hint="@string/hint_tratamiento" android:maxLength="300" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/veterinario" />
+            <EditText android:id="@+id/etVeterinarioVisita" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="textCapWords"
+                android:hint="@string/hint_veterinario" android:maxLength="100" android:importantForAutofill="no" />
+            <CheckBox android:id="@+id/cbControlVisita" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="16dp"
+                android:text="@string/control_visita" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEnviarVisita"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp"
+                android:layout_marginTop="24dp" android:text="@string/enviar_vacuna" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

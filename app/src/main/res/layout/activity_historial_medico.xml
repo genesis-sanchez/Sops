@@ -16,4 +16,8 @@
                 android:layout_marginTop="24dp" android:orientation="vertical" />
         </LinearLayout>
     </ScrollView>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnRegistrarVisita"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginStart="24dp" android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp" android:minHeight="48dp" android:text="@string/registrar_visita" />
 </LinearLayout>

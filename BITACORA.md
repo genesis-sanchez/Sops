@@ -63,3 +63,11 @@
 **dificultad:** mostrar a que mascota pertenece el historial.
 
 **solucion:** pase la mascota con un intent y mostre su nombre en la pantalla.
+
+## 15 de noviembre de 2026 - registrar visita
+
+**avance:** agregue el formulario de visita desde el historial.
+
+**dificultad:** mostrar la mascota elegida en el formulario.
+
+**solucion:** la pase con putExtra. al enviar se revisan los campos y se muestra un resumen.

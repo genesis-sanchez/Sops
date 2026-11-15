@@ -1,6 +1,7 @@
 package com.udh.sops.controller;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +19,11 @@ public class HistorialMedicoActivity extends BaseActivity {
         Mascota mascota = IntentCompat.getSerializableExtra(getIntent(),
                 DetalleMascotaActivity.EXTRA_MASCOTA, Mascota.class);
         if (mascota == null) { finish(); return; }
+        findViewById(R.id.btnRegistrarVisita).setOnClickListener(view -> {
+            Intent intent = new Intent(this, RegistroVisitaActivity.class);
+            intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
+            startActivity(intent);
+        });
         ((TextView) findViewById(R.id.tvMascotaHistorial)).setText(
                 getString(R.string.historial_de, mascota.getNombre()));
         if (getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false)) {

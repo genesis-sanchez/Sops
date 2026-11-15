@@ -1,4 +1,22 @@
 <resources>
+    <string name="registrar_visita">registrar visita</string>
+    <string name="visita_de">visita de %1$s</string>
+    <string name="fecha_visita">fecha de la visita</string>
+    <string name="motivo_visita">motivo</string>
+    <string name="diagnostico_visita">diagnostico</string>
+    <string name="tratamiento_visita">tratamiento</string>
+    <string name="hint_diagnostico">resultado de la consulta</string>
+    <string name="hint_tratamiento">indicaciones o sin tratamiento</string>
+    <string name="control_visita">requiere otro control</string>
+    <string name="resumen_visita">resumen de la visita</string>
+    <string name="visita_confirmacion">mascota: %1$s\nfecha: %2$s\nmotivo: %3$s\ndiagnostico: %4$s\ntratamiento: %5$s\nveterinario: %6$s\nrequiere control: %7$s\n\ndatos no guardados.</string>
+    <string-array name="motivos_visita">
+        <item>selecciona un motivo</item>
+        <item>revision general</item>
+        <item>control de tratamiento</item>
+        <item>consulta por malestar</item>
+        <item>otro</item>
+    </string-array>
     <string name="historial_titulo">historial medico</string>
     <string name="historial_de">historial de %1$s</string>
     <string name="historial_ejemplo">visitas y tratamientos</string>
