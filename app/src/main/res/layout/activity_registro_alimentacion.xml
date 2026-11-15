@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/tvMascotaRegistroAlimentacion" style="@style/Sops.TituloSeccion" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/alimento_label" />
+            <EditText android:id="@+id/etAlimento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="text"
+                android:hint="@string/hint_alimento" android:maxLength="100" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/cantidad_alimento_label" />
+            <EditText android:id="@+id/etCantidadAlimento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="text"
+                android:hint="@string/hint_cantidad_alimento" android:maxLength="60" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/horarios_alimento_label" />
+            <EditText android:id="@+id/etHorariosAlimento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="text"
+                android:hint="@string/hint_horarios_alimento" android:maxLength="100" android:importantForAutofill="no" />
+            <TextView android:id="@+id/tvFrecuenciaAlimento" style="@style/Sops.EtiquetaDato"
+                android:text="@string/frecuencia_alimento_label" android:labelFor="@id/spFrecuenciaAlimento" />
+            <Spinner android:id="@+id/spFrecuenciaAlimento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:spinnerMode="dropdown" />
+            <CheckBox android:id="@+id/cbDietaEspecial" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="16dp"
+                android:text="@string/dieta_especial" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/observaciones_alimento_label" />
+            <EditText android:id="@+id/etObservacionesAlimento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="80dp" android:inputType="textMultiLine"
+                android:hint="@string/hint_observaciones_alimento" android:maxLength="300" android:importantForAutofill="no" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEnviarAlimentacion"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp"
+                android:layout_marginTop="24dp" android:text="@string/enviar_vacuna" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

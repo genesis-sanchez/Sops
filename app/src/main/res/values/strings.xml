@@ -1,4 +1,19 @@
 <resources>
+    <string name="registrar_alimentacion">registrar alimentacion</string>
+    <string name="hint_alimento">nombre del alimento</string>
+    <string name="hint_cantidad_alimento">por ejemplo: 1 porcion</string>
+    <string name="hint_horarios_alimento">por ejemplo: 08:00 y 18:00</string>
+    <string name="frecuencia_alimento_label">frecuencia</string>
+    <string name="dieta_especial">tiene dieta especial</string>
+    <string name="hint_observaciones_alimento">observaciones (opcional)</string>
+    <string name="resumen_alimentacion">resumen de alimentacion</string>
+    <string name="alimentacion_confirmacion">mascota: %1$s\nalimento: %2$s\ncantidad: %3$s\nhorarios: %4$s\nfrecuencia: %5$s\ndieta especial: %6$s\nobservaciones: %7$s\n\ndatos no guardados.</string>
+    <string-array name="frecuencias_alimento">
+        <item>selecciona una frecuencia</item>
+        <item>diaria</item>
+        <item>dias alternos</item>
+        <item>ocasional</item>
+    </string-array>
     <string name="alimentacion_titulo">alimentacion</string>
     <string name="alimentacion_de">alimentacion de %1$s</string>
     <string name="alimento_label">alimento</string>

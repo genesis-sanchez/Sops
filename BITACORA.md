@@ -79,3 +79,11 @@
 **dificultad:** abrir los datos desde la ficha de la mascota.
 
 **solucion:** use un intent y mostre los datos del modelo.
+
+## 15 de noviembre de 2026 - registrar alimentacion
+
+**avance:** agregue el formulario de alimentacion.
+
+**dificultad:** abrirlo con la mascota elegida.
+
+**solucion:** use un intent con putExtra y mostre un resumen al enviar.
