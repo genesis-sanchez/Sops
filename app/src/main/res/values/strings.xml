@@ -1,4 +1,15 @@
 <resources>
+    <string name="consejos_titulo">consejos</string>
+    <string name="consejos_encabezado">pequenos cuidados diarios</string>
+    <string name="consejos_intro">algunos ejemplos para perros y gatos.</string>
+    <string name="consejos_perros">perros</string>
+    <string name="consejos_perros_texto">deja agua limpia a su alcance.\npasea con correa y recoge sus desechos.\ndedica un momento del dia para jugar.</string>
+    <string name="consejos_golden">golden retriever</string>
+    <string name="consejos_golden_texto">incluye el cepillado en su rutina de cuidado.</string>
+    <string name="consejos_gatos">gatos</string>
+    <string name="consejos_gatos_texto">manten limpia su caja de arena.\nofrece un rascador y juguetes.\nprepara un lugar tranquilo para descansar.</string>
+    <string name="consejos_angora">angora</string>
+    <string name="consejos_angora_texto">cepilla su pelo con suavidad para evitar enredos.</string>
     <string name="sops_marca">Sops</string>
     <string name="menu_inicio">inicio</string>
     <string name="menu_mascotas">mis mascotas</string>

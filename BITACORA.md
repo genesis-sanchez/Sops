@@ -47,3 +47,11 @@
 **dificultad:** compartir el menu entre las pantallas.
 
 **solucion:** lo puse en la barra y use intents desde BaseActivity.
+
+## 15 de noviembre de 2026 - consejos
+
+**avance:** agregue la vista de consejos con ejemplos para perros y gatos.
+
+**dificultad:** abrir la pantalla desde el menu.
+
+**solucion:** puse consejos en los tres puntos y lo abri con un intent.

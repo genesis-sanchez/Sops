@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView style="@style/Sops.TituloSeccion" android:text="@string/consejos_encabezado" />
+            <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+                android:text="@string/consejos_intro" />
+            <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/consejos_perros" />
+                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="6dp" android:text="@string/consejos_perros_texto" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/consejos_golden" />
+                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+                        android:text="@string/consejos_golden_texto" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/consejos_gatos" />
+                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="6dp" android:text="@string/consejos_gatos_texto" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/consejos_angora" />
+                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+                        android:text="@string/consejos_angora_texto" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
