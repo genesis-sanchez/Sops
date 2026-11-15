@@ -30,6 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             Class<?> destino;
             if (item.getItemId() == R.id.menuInicio) destino = MainActivity.class;
             else if (item.getItemId() == R.id.menuConsejos) destino = ConsejosActivity.class;
+            else if (item.getItemId() == R.id.menuAcerca) destino = AcercaActivity.class;
             else if (item.getItemId() == R.id.menuMascotas) destino = ListaMascotasActivity.class;
             else if (item.getItemId() == R.id.menuRegistro) destino = RegistroMascotaActivity.class;
             else return false;

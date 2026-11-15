@@ -1,4 +1,12 @@
 <resources>
+    <string name="acerca_titulo">Acerca de Sops</string>
+    <string name="acerca_lema">Cada cuidado cuenta.</string>
+    <string name="acerca_proposito">Pensado para su bienestar</string>
+    <string name="acerca_descripcion">Sops nace para ayudarte a organizar el cuidado de tus mascotas: sus vacunas, visitas veterinarias y alimentación, en un solo lugar.\n\nLa idea es tener a mano la información de cada compañero y consultar sus cuidados sin depender de notas sueltas. Cada mascota tiene su propia ficha para que sea más fácil encontrar lo que necesitas.\n\nTambién encontrarás consejos para acompañarla en su día a día, porque los pequeños cuidados forman parte de su bienestar. ❤️</string>
+    <string name="acerca_autora_label">Desarrollado por</string>
+    <string name="acerca_autora">Génesis Solange Sánchez Paredes</string>
+    <string name="acerca_version_label">Versión</string>
+    <string name="acerca_version">1.0</string>
     <string name="registrar_alimentacion">registrar alimentacion</string>
     <string name="hint_alimento">nombre del alimento</string>
     <string name="hint_cantidad_alimento">por ejemplo: 1 porcion</string>

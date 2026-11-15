@@ -87,3 +87,11 @@
 **dificultad:** abrirlo con la mascota elegida.
 
 **solucion:** use un intent con putExtra y mostre un resumen al enviar.
+
+## 15 de noviembre de 2026 - acerca de Sops
+
+**avance:** agregue la vista con el proposito de la app, autora y version.
+
+**dificultad:** abrirla desde los tres puntos.
+
+**solucion:** agregue la opcion al menu y use un intent.

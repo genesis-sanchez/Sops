@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sops">
+        <activity android:name=".controller.AcercaActivity" android:exported="false" />
         <activity android:name=".controller.RegistroAlimentacionActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".controller.AlimentacionActivity" android:exported="false" />
         <activity android:name=".controller.RegistroVisitaActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />

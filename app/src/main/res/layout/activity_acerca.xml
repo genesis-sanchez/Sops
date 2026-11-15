@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contenedorPantalla" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/sops_principal" app:strokeColor="@color/sops_principal">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center_horizontal" android:padding="28dp">
+                    <ImageView android:layout_width="80dp" android:layout_height="80dp"
+                        android:background="@drawable/fondo_icono_acerca" android:padding="16dp"
+                        android:src="@drawable/ic_huella" android:importantForAccessibility="no" />
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/sops_marca"
+                        android:gravity="center" android:textSize="34sp" android:textColor="@color/white"
+                        android:layout_marginTop="16dp" />
+                    <TextView style="@style/Sops.Descripcion" android:text="@string/acerca_lema"
+                        android:gravity="center" android:textColor="@color/white" android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="24dp">
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/acerca_proposito" />
+                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp" android:text="@string/acerca_descripcion" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="24dp">
+                    <TextView style="@style/Sops.Descripcion" android:textSize="14sp"
+                        android:text="@string/acerca_autora_label" />
+                    <TextView style="@style/Sops.TituloSeccion" android:layout_marginTop="8dp"
+                        android:textSize="18sp" android:text="@string/acerca_autora" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp"
+                        android:layout_marginTop="20dp" android:background="@color/sops_borde" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="16dp">
+                        <TextView style="@style/Sops.Descripcion" android:layout_width="0dp"
+                            android:layout_weight="1" android:text="@string/acerca_version_label" />
+                        <TextView style="@style/Sops.Descripcion" android:layout_width="wrap_content"
+                            android:textColor="@color/sops_principal" android:textStyle="bold"
+                            android:text="@string/acerca_version" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
