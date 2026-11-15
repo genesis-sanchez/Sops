@@ -39,3 +39,11 @@
 **dificultad:** mostrar en el formulario la mascota seleccionada.
 
 **solucion:** pase la mascota con putExtra. el formulario muestra una confirmacion de ejemplo sin guardar datos.
+
+## 15 de noviembre de 2026 - menu
+
+**avance:** agregue la barra verde con iconos blancos de huella y agregar. en los tres puntos deje inicio.
+
+**dificultad:** compartir el menu entre las pantallas.
+
+**solucion:** lo puse en la barra y use intents desde BaseActivity.

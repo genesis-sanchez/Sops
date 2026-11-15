@@ -5,6 +5,11 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:minHeight="?attr/actionBarSize"
-    app:titleTextColor="@color/sops_texto"
+    android:background="@color/sops_principal"
+    android:theme="@style/Sops.BarraOverlay"
+    android:elevation="1dp"
+    app:titleTextColor="@color/white"
+    app:navigationIconTint="@color/white"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:navigationIcon="@drawable/ic_volver"
     app:navigationContentDescription="@string/volver" />

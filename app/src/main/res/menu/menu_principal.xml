@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menuInicio" android:title="@string/menu_inicio" app:showAsAction="never" />
+    <item android:id="@+id/menuRegistro" android:title="@string/menu_registro"
+        android:icon="@drawable/ic_agregar" app:iconTint="@color/white" app:showAsAction="always" />
+    <item android:id="@+id/menuMascotas" android:title="@string/menu_mascotas"
+        android:icon="@drawable/ic_menu_mascotas" app:iconTint="@color/white" app:showAsAction="always" />
+</menu>

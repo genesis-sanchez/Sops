@@ -1,4 +1,8 @@
 <resources>
+    <string name="sops_marca">Sops</string>
+    <string name="menu_inicio">inicio</string>
+    <string name="menu_mascotas">mis mascotas</string>
+    <string name="menu_registro">registrar mascota</string>
     <string name="registrar_vacuna">registrar vacuna</string>
     <string name="vacuna_form_aviso">datos de la vacuna aplicada. no se guardaran.</string>
     <string name="nombre_vacuna">nombre de la vacuna</string>
