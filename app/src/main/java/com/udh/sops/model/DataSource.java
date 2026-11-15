@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataSource {
+    public static Alimentacion getAlimentacionEjemplo(Mascota mascota) {
+        if ("Perro".equals(mascota.getTipo())) {
+            return new Alimentacion("alimento seco para perros", "1 porcion por comida",
+                    "08:00 y 18:00", "come en su plato del patio.");
+        }
+        if ("Gato".equals(mascota.getTipo())) {
+            return new Alimentacion("alimento seco para gatos", "1 porcion por comida",
+                    "08:00, 14:00 y 20:00", "prefiere comer en un lugar tranquilo.");
+        }
+        return null;
+    }
+
     public static List<RegistroMedico> getHistorialEjemplo(Mascota mascota) {
         List<RegistroMedico> lista = new ArrayList<>();
         lista.add(new RegistroMedico("12/11/2026", "control de tratamiento",

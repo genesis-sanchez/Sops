@@ -71,3 +71,11 @@
 **dificultad:** mostrar la mascota elegida en el formulario.
 
 **solucion:** la pase con putExtra. al enviar se revisan los campos y se muestra un resumen.
+
+## 15 de noviembre de 2026 - alimentacion
+
+**avance:** agregue la vista de alimentacion con alimento, cantidad y horarios.
+
+**dificultad:** abrir los datos desde la ficha de la mascota.
+
+**solucion:** use un intent y mostre los datos del modelo.
