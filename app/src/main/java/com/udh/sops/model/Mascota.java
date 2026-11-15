@@ -9,6 +9,19 @@ public class Mascota implements Serializable {
     private String edad;
     private String sexo;
     private boolean esterilizado;
+    private String fechaNacimiento;
+    private String peso;
+
+    public Mascota(String nombre, String tipo, String raza, String edad, String sexo,
+                   boolean esterilizado, String fechaNacimiento, String peso) {
+        this(nombre, tipo, raza, edad, sexo, esterilizado);
+        this.fechaNacimiento = fechaNacimiento;
+        this.peso = peso;
+    }
+
+    public String getFechaNacimiento() { return fechaNacimiento; }
+
+    public String getPeso() { return peso; }
 
     public Mascota(String nombre, String tipo, String raza, String edad, String sexo, boolean esterilizado) {
         this.nombre = nombre;

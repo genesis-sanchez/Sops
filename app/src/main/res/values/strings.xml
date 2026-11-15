@@ -1,4 +1,35 @@
 <resources>
+    <string name="registro_intro">Cuéntanos sobre tu mascota</string>
+    <string name="registro_aviso">Completa todos los datos. En esta demostración podrás revisar la ficha, pero la mascota no se guardará en la lista.</string>
+    <string name="label_nombre">Nombre</string>
+    <string name="label_raza">Raza</string>
+    <string name="label_peso">Peso (kg)</string>
+    <string name="hint_peso">Por ejemplo: 4,5</string>
+    <string name="hint_raza_registro">Por ejemplo: mestizo</string>
+    <string name="label_nacimiento">Fecha de nacimiento</string>
+    <string name="seleccionar_fecha">Seleccionar fecha</string>
+    <string name="sexo_macho">Macho</string>
+    <string name="sexo_hembra">Hembra</string>
+    <string name="esterilizado_opcion">Mi mascota está esterilizada</string>
+    <string name="enviar_mascota">Enviar y revisar ficha</string>
+    <string name="error_obligatorio">Completa este campo</string>
+    <string name="error_peso">Ingresa un peso mayor que cero</string>
+    <string name="error_registro">Revisa los campos y selecciona la especie, el sexo y la fecha de nacimiento.</string>
+    <string name="confirmacion_demo">Formulario enviado correctamente. Esta ficha es una vista previa: los datos no se guardaron. Puedes volver para corregirlos.</string>
+    <string name="peso_kg">%1$s kg</string>
+    <string name="menor_un_anio">Menos de 1 año</string>
+    <plurals name="edad_anios">
+        <item quantity="one">%d año</item>
+        <item quantity="other">%d años</item>
+    </plurals>
+    <string-array name="especies">
+        <item>Selecciona una especie</item>
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Conejo</item>
+        <item>Ave</item>
+        <item>Otra</item>
+    </string-array>
     <string name="btn_ver_mascotas">Ver mis mascotas</string>
     <string name="lista_descripcion">Cada compañero tiene su historia</string>
     <string name="lista_indicacion">Toca una mascota para conocer sus datos.</string>

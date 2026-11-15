@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView style="@style/Sops.TituloSeccion" android:text="@string/registro_intro" />
+            <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+                android:text="@string/registro_aviso" />
+            <TextView style="@style/Sops.EtiquetaDato"
+                android:text="@string/label_nombre" />
+            <EditText android:id="@+id/etNombre" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:hint="@string/hint_nombre" android:inputType="textCapWords"
+                android:maxLength="60" android:maxLines="1" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:labelFor="@id/spEspecie"
+                android:text="@string/label_especie" />
+            <Spinner android:id="@+id/spEspecie" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:spinnerMode="dropdown" />
+            <TextView style="@style/Sops.EtiquetaDato"
+                android:text="@string/label_raza" />
+            <EditText android:id="@+id/etRaza" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:hint="@string/hint_raza_registro" android:inputType="textCapWords"
+                android:maxLength="80" android:maxLines="1" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:labelFor="@id/btnFechaNacimiento"
+                android:text="@string/label_nacimiento" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFechaNacimiento" style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:text="@string/seleccionar_fecha" />
+            <TextView style="@style/Sops.EtiquetaDato"
+                android:text="@string/label_peso" />
+            <EditText android:id="@+id/etPeso" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:hint="@string/hint_peso" android:inputType="numberDecimal"
+                android:maxLength="8" android:maxLines="1" android:importantForAutofill="no" />
+            <TextView style="@style/Sops.EtiquetaDato" android:labelFor="@id/rgSexo"
+                android:text="@string/label_sexo" />
+            <RadioGroup android:id="@+id/rgSexo" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <RadioButton android:id="@+id/rbMacho" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/sexo_macho" />
+                <RadioButton android:id="@+id/rbHembra" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/sexo_hembra" />
+            </RadioGroup>
+            <CheckBox android:id="@+id/cbEsterilizado" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:layout_marginTop="12dp" android:text="@string/esterilizado_opcion" />
+            <TextView android:id="@+id/tvErrorRegistro" style="@style/Sops.Descripcion"
+                android:layout_marginTop="12dp" android:textColor="?attr/colorError"
+                android:accessibilityLiveRegion="polite" android:visibility="gone" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardarMascota" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp"
+                android:layout_marginTop="24dp" android:text="@string/enviar_mascota" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

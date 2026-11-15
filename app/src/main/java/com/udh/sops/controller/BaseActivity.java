@@ -12,7 +12,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void prepararPantalla(int layout, int titulo) {
         setContentView(layout);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.contenedorPantalla), (view, insets) -> {
-            Insets barras = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            Insets barras = insets.getInsets(WindowInsetsCompat.Type.systemBars()
+                    | WindowInsetsCompat.Type.ime());
             view.setPadding(barras.left, barras.top, barras.right, barras.bottom);
             return insets;
         });

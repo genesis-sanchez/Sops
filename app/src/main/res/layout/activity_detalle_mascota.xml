@@ -32,9 +32,17 @@
                     <TextView android:id="@+id/tvSexoDetalle" style="@style/Sops.ValorDato" />
                     <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_esterilizado" />
                     <TextView android:id="@+id/tvEsterilizadoDetalle" style="@style/Sops.ValorDato" />
+                    <LinearLayout android:id="@+id/contenedorDatosRegistro"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:visibility="gone">
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_nacimiento" />
+                        <TextView android:id="@+id/tvNacimientoDetalle" style="@style/Sops.ValorDato" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/label_peso" />
+                        <TextView android:id="@+id/tvPesoDetalle" style="@style/Sops.ValorDato" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-            <TextView style="@style/Sops.Descripcion" android:layout_marginTop="20dp"
+            <TextView android:id="@+id/tvAvisoDetalle" style="@style/Sops.Descripcion" android:layout_marginTop="20dp"
                 android:textSize="13sp" android:text="@string/datos_ejemplo" />
         </LinearLayout>
     </ScrollView>

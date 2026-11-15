@@ -2,12 +2,14 @@ package com.udh.sops.controller;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.view.View;
 import androidx.core.content.IntentCompat;
 import com.udh.sops.R;
 import com.udh.sops.model.Mascota;
 
 public class DetalleMascotaActivity extends BaseActivity {
     public static final String EXTRA_MASCOTA = "com.udh.sops.extra.MASCOTA";
+    public static final String EXTRA_REGISTRO_DEMO = "com.udh.sops.extra.REGISTRO_DEMO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,14 @@ public class DetalleMascotaActivity extends BaseActivity {
         mostrar(R.id.tvSexoDetalle, mascota.getSexo());
         mostrar(R.id.tvEsterilizadoDetalle, getString(mascota.isEsterilizado()
                 ? R.string.respuesta_si : R.string.respuesta_no));
+        if (mascota.getFechaNacimiento() != null && mascota.getPeso() != null) {
+            findViewById(R.id.contenedorDatosRegistro).setVisibility(View.VISIBLE);
+            mostrar(R.id.tvNacimientoDetalle, mascota.getFechaNacimiento());
+            mostrar(R.id.tvPesoDetalle, getString(R.string.peso_kg, mascota.getPeso()));
+        }
+        if (getIntent().getBooleanExtra(EXTRA_REGISTRO_DEMO, false)) {
+            mostrar(R.id.tvAvisoDetalle, getString(R.string.confirmacion_demo));
+        }
     }
 
     private void mostrar(int id, String texto) {
