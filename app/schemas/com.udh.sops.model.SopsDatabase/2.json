@@ -1,0 +1,150 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "7be65f934ca30ccc6402556f4196abeb",
+    "entities": [
+      {
+        "tableName": "mascotas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `tipo` TEXT, `raza` TEXT, `edad` TEXT, `sexo` TEXT, `esterilizado` INTEGER NOT NULL, `fechaNacimiento` TEXT, `peso` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tipo",
+            "columnName": "tipo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "raza",
+            "columnName": "raza",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "edad",
+            "columnName": "edad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sexo",
+            "columnName": "sexo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "esterilizado",
+            "columnName": "esterilizado",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fechaNacimiento",
+            "columnName": "fechaNacimiento",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "peso",
+            "columnName": "peso",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "vacunas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre` TEXT, `dosis` INTEGER NOT NULL, `fecha` TEXT, `proximaFecha` TEXT, `aplicada` INTEGER NOT NULL, `veterinario` TEXT, `observaciones` TEXT, `recordatorio` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dosis",
+            "columnName": "dosis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "proximaFecha",
+            "columnName": "proximaFecha",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "aplicada",
+            "columnName": "aplicada",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "veterinario",
+            "columnName": "veterinario",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "observaciones",
+            "columnName": "observaciones",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recordatorio",
+            "columnName": "recordatorio",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7be65f934ca30ccc6402556f4196abeb')"
+    ]
+  }
+}

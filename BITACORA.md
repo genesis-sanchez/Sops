@@ -143,3 +143,11 @@
 **dificultad:** cambiar los datos sin crear otra mascota.
 
 **solucion:** use el mismo id para actualizar. para eliminar agregue una confirmacion y el regreso a la lista.
+
+## 16 de noviembre de 2026 - preparar vacunas
+
+**avance:** converti Vacuna en una entidad, cree VacunaDao y la agregue a SopsDatabase.
+
+**dificultad:** agregar la tabla sin borrar las mascotas guardadas.
+
+**solucion:** actualice la version de la base para crear la tabla de vacunas. falta relacionarla con mascotas y conectar las pantallas.

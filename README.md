@@ -51,6 +51,8 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 
 Esta sección se irá ampliando con los siguientes avances.
 
+En vacunas se prepararon la entidad, su DAO y la tabla en la base de datos. La relación con las mascotas y el guardado desde el formulario quedan para los siguientes avances.
+
 ## Cómo abrir el proyecto
 
 Se desarrolló con **Android Studio Quail 3 | 2026.1.3**.
