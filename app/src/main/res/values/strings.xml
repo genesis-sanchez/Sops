@@ -1,4 +1,15 @@
 <resources>
+    <string name="editar_mascota">editar mascota</string>
+    <string name="guardar_cambios">guardar cambios</string>
+    <string name="mascota_actualizada">datos actualizados</string>
+    <string name="revisar_nacimiento">selecciona la fecha de nacimiento para continuar.</string>
+    <string name="eliminar_mascota">eliminar mascota</string>
+    <string name="confirmar_eliminar_mascota">¿eliminar a %1$s? se borrara su ficha.</string>
+    <string name="cancelar">cancelar</string>
+    <string name="eliminar">eliminar</string>
+    <string name="mascota_eliminada">mascota eliminada</string>
+    <string name="error_eliminar_mascota">no se pudo eliminar. intenta otra vez.</string>
+    <string name="error_cargar_ficha">no se pudo actualizar la ficha. vuelve a abrirla.</string>
     <string name="cargando_mascotas">cargando mascotas...</string>
     <string name="lista_sin_mascotas">aun no tienes mascotas. usa el boton + para registrar una.</string>
     <string name="error_cargar_mascotas">no se pudieron cargar las mascotas. vuelve a abrir la lista.</string>

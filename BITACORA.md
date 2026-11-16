@@ -135,3 +135,11 @@
 **dificultad:** actualizar la lista al regresar a la pantalla.
 
 **solucion:** consulte las mascotas al abrir la lista y mostre un aviso cuando no hay registros.
+
+## 16 de noviembre de 2026 - editar y eliminar mascotas
+
+**avance:** agregue los botones para editar y eliminar desde la ficha.
+
+**dificultad:** cambiar los datos sin crear otra mascota.
+
+**solucion:** use el mismo id para actualizar. para eliminar agregue una confirmacion y el regreso a la lista.

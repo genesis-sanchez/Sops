@@ -12,14 +12,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
+import androidx.core.content.IntentCompat;
 import com.google.android.material.button.MaterialButton;
 import com.udh.sops.R;
 import com.udh.sops.model.Mascota;
 import com.udh.sops.model.SopsDatabase;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.util.Calendar;
 
 public class RegistroMascotaActivity extends BaseActivity {
+    public static final String EXTRA_EDITAR_MASCOTA = "com.udh.sops.extra.EDITAR_MASCOTA";
     private static final String ESTADO_FECHA = "fechaNacimiento";
     private EditText nombre, raza, peso;
     private Spinner especie;
@@ -27,11 +30,15 @@ public class RegistroMascotaActivity extends BaseActivity {
     private MaterialButton fecha;
     private TextView error;
     private Calendar nacimiento;
+    private Mascota mascotaEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        prepararPantalla(R.layout.activity_registro_mascota, R.string.title_registro_mascota);
+        mascotaEditar = IntentCompat.getSerializableExtra(getIntent(), EXTRA_EDITAR_MASCOTA, Mascota.class);
+        if (mascotaEditar != null && mascotaEditar.getId() <= 0) { finish(); return; }
+        prepararPantalla(R.layout.activity_registro_mascota, mascotaEditar == null
+                ? R.string.title_registro_mascota : R.string.editar_mascota);
         nombre = findViewById(R.id.etNombre);
         raza = findViewById(R.id.etRaza);
         peso = findViewById(R.id.etPeso);
@@ -43,6 +50,30 @@ public class RegistroMascotaActivity extends BaseActivity {
                 R.array.especies, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         especie.setAdapter(adapter);
+        if (mascotaEditar != null) {
+            nombre.setText(mascotaEditar.getNombre());
+            raza.setText(mascotaEditar.getRaza());
+            peso.setText(mascotaEditar.getPeso());
+            int posicion = adapter.getPosition(mascotaEditar.getTipo());
+            especie.setSelection(Math.max(0, posicion));
+            if (getString(R.string.sexo_macho).equals(mascotaEditar.getSexo())) sexo.check(R.id.rbMacho);
+            else if (getString(R.string.sexo_hembra).equals(mascotaEditar.getSexo())) sexo.check(R.id.rbHembra);
+            ((CheckBox) findViewById(R.id.cbEsterilizado)).setChecked(mascotaEditar.isEsterilizado());
+            ((MaterialButton) findViewById(R.id.btnGuardarMascota)).setText(R.string.guardar_cambios);
+            try {
+                DateFormat formato = DateFormat.getDateInstance(DateFormat.MEDIUM);
+                formato.setLenient(false);
+                if (mascotaEditar.getFechaNacimiento() != null) {
+                    nacimiento = Calendar.getInstance();
+                    nacimiento.setTime(formato.parse(mascotaEditar.getFechaNacimiento()));
+                    actualizarFecha();
+                }
+            } catch (ParseException exception) {
+                nacimiento = null;
+                error.setText(R.string.revisar_nacimiento);
+                error.setVisibility(View.VISIBLE);
+            }
+        }
         if (savedInstanceState != null && savedInstanceState.containsKey(ESTADO_FECHA)) {
             nacimiento = Calendar.getInstance();
             nacimiento.setTimeInMillis(savedInstanceState.getLong(ESTADO_FECHA));
@@ -125,15 +156,25 @@ public class RegistroMascotaActivity extends BaseActivity {
         boton.setText(R.string.guardando_mascota);
         new Thread(() -> {
             try {
-                long id = SopsDatabase.obtenerInstancia(getApplicationContext())
-                        .mascotaDao().insertar(mascota);
-                mascota.setId(id);
+                if (mascotaEditar == null) {
+                    long id = SopsDatabase.obtenerInstancia(getApplicationContext())
+                            .mascotaDao().insertar(mascota);
+                    mascota.setId(id);
+                } else {
+                    mascota.setId(mascotaEditar.getId());
+                    int cambios = SopsDatabase.obtenerInstancia(getApplicationContext())
+                            .mascotaDao().actualizar(mascota);
+                    if (cambios != 1) throw new IllegalStateException("La mascota ya no existe");
+                }
                 runOnUiThread(() -> {
                     if (isFinishing() || isDestroyed()) return;
-                    Toast.makeText(this, R.string.mascota_guardada, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, DetalleMascotaActivity.class);
-                    intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
-                    startActivity(intent);
+                    Toast.makeText(this, mascotaEditar == null ? R.string.mascota_guardada
+                            : R.string.mascota_actualizada, Toast.LENGTH_SHORT).show();
+                    if (mascotaEditar == null) {
+                        Intent intent = new Intent(this, DetalleMascotaActivity.class);
+                        intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
+                        startActivity(intent);
+                    }
                     finish();
                 });
             } catch (Exception exception) {
@@ -141,7 +182,7 @@ public class RegistroMascotaActivity extends BaseActivity {
                 runOnUiThread(() -> {
                     if (isFinishing() || isDestroyed()) return;
                     boton.setEnabled(true);
-                    boton.setText(R.string.enviar_mascota);
+                    boton.setText(mascotaEditar == null ? R.string.enviar_mascota : R.string.guardar_cambios);
                     error.setText(R.string.error_guardar_mascota);
                     error.setVisibility(View.VISIBLE);
                 });
