@@ -58,7 +58,11 @@ public class VacunasActivity extends BaseActivity {
                         .vacunaDao().obtenerPorMascota(mascota.getId());
                 runOnUiThread(() -> {
                     if (isFinishing() || isDestroyed()) return;
-                    lista.setAdapter(new VacunaAdapter(vacunas));
+                    lista.setAdapter(new VacunaAdapter(vacunas, vacuna -> {
+                        Intent intent = new Intent(this, DetalleVacunaActivity.class);
+                        intent.putExtra(DetalleVacunaActivity.EXTRA_VACUNA_ID, vacuna.getId());
+                        startActivity(intent);
+                    }));
                     estado.setText(R.string.sin_vacunas);
                     estado.setVisibility(vacunas.isEmpty() ? View.VISIBLE : View.GONE);
                     lista.setVisibility(vacunas.isEmpty() ? View.GONE : View.VISIBLE);

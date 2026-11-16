@@ -159,3 +159,11 @@
 **dificultad:** mostrar solo las vacunas de la mascota elegida.
 
 **solucion:** guarde el id de la mascota en cada vacuna y consulte la lista usando ese id.
+
+## 16 de noviembre de 2026 - detalle de vacuna
+
+**avance:** agregue la pantalla con los datos de la vacuna.
+
+**dificultad:** abrir la vacuna elegida desde la lista.
+
+**solucion:** pase su id con un intent y consulte sus datos en room.

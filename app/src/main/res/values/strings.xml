@@ -1,6 +1,14 @@
 <resources>
+    <string name="detalle_vacuna_titulo">detalle de vacuna</string>
+    <string name="estado_vacuna_label">estado</string>
+    <string name="detalle_observaciones_vacuna">observaciones</string>
+    <string name="recordatorio_solicitado">recordatorio solicitado</string>
+    <string name="dato_sin_registrar">sin registrar</string>
+    <string name="cargando_detalle_vacuna">cargando vacuna...</string>
+    <string name="error_cargar_detalle_vacuna">no se pudo cargar la vacuna. vuelve a abrirla.</string>
+    <string name="vacuna_no_encontrada">la vacuna ya no esta disponible.</string>
     <string name="guardar_mascota_primero">primero guarda la mascota.</string>
-    <string name="vacunas_descripcion">aplicaciones y proximas fechas</string>
+    <string name="vacunas_descripcion">toca una vacuna para ver sus datos.</string>
     <string name="cargando_vacunas">cargando vacunas...</string>
     <string name="error_cargar_vacunas">no se pudieron cargar las vacunas. vuelve a abrir la lista.</string>
     <string name="guardar_vacuna">guardar vacuna</string>

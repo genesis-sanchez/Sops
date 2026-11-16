@@ -12,10 +12,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VacunaAdapter extends RecyclerView.Adapter<VacunaAdapter.VacunaViewHolder> {
-    private final List<Vacuna> vacunas;
+    public interface AlPulsarVacuna {
+        void abrir(Vacuna vacuna);
+    }
 
-    public VacunaAdapter(List<Vacuna> vacunas) {
+    private final List<Vacuna> vacunas;
+    private final AlPulsarVacuna alPulsar;
+
+    public VacunaAdapter(List<Vacuna> vacunas, AlPulsarVacuna alPulsar) {
         this.vacunas = new ArrayList<>(vacunas);
+        this.alPulsar = alPulsar;
     }
 
     @NonNull @Override
@@ -33,6 +39,7 @@ public class VacunaAdapter extends RecyclerView.Adapter<VacunaAdapter.VacunaView
                 vacuna.getDosis(), holder.itemView.getContext().getString(vacuna.isAplicada()
                         ? R.string.fecha_aplicada : R.string.fecha_programada),
                 vacuna.getFecha(), vacuna.getProximaFecha()));
+        holder.itemView.setOnClickListener(view -> alPulsar.abrir(vacuna));
     }
 
     @Override public int getItemCount() { return vacunas.size(); }
