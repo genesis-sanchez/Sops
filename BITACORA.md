@@ -127,3 +127,11 @@
 **dificultad:** abrir la ficha despues de guardar los datos.
 
 **solucion:** use el dao para guardar y pase la mascota a su ficha. falta mostrar los registros guardados en la lista.
+
+## 16 de noviembre de 2026 - listar mascotas
+
+**avance:** conecte mis mascotas con room para mostrar los registros guardados.
+
+**dificultad:** actualizar la lista al regresar a la pantalla.
+
+**solucion:** consulte las mascotas al abrir la lista y mostre un aviso cuando no hay registros.

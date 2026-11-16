@@ -25,7 +25,26 @@ Los formularios indican si falta completar un campo obligatorio. Al enviar los d
 
 ## Estado del proyecto
 
-El registro de mascotas ya guarda los datos en el celular y abre su ficha. La lista todavía muestra las mascotas de ejemplo. Los otros formularios aún no guardan datos y los recordatorios no envían avisos.
+El registro de mascotas ya guarda los datos en el celular y abre su ficha. Mis mascotas muestra los registros guardados y se actualiza al volver a la pantalla. Los otros formularios aún no guardan datos y los recordatorios no envían avisos.
+
+## Antes y ahora
+
+### Primera versión
+
+Se crearon las pantallas, el menú y los formularios. La lista mostraba cinco mascotas de ejemplo y permitía abrir sus fichas. Al completar un formulario se mostraba un resumen, pero los datos no se guardaban.
+
+### Avances con Room
+
+Primero se preparó la base de datos de mascotas. Después se conectó el formulario para guardar los registros y abrir su ficha. Finalmente, se conectó Mis mascotas para consultar los datos guardados.
+
+| Parte de la app | Antes | Ahora |
+| --- | --- | --- |
+| Registro de mascotas | Mostraba una ficha sin guardar los datos. | Guarda la mascota en el celular y abre su ficha. |
+| Mis mascotas | Mostraba las cinco mascotas de ejemplo. | Muestra las mascotas guardadas y se actualiza al regresar. |
+| Al cerrar la app | Los datos ingresados se perdían. | Las mascotas registradas permanecen guardadas. |
+| Vacunas, visitas y alimentación | Los formularios mostraban un resumen. | Mantienen ese funcionamiento; falta conectar su guardado. |
+
+Esta sección se irá ampliando con los siguientes avances.
 
 ## Cómo abrir el proyecto
 
@@ -42,7 +61,9 @@ La [bitácora](BITACORA.md) reúne los avances y las dificultades encontradas du
 
 ## Pantallas
 
-Capturas de Sops en funcionamiento.
+Estas capturas corresponden a la primera versión de Sops. Se conservan para mostrar cómo empezó el proyecto; las capturas de los nuevos avances se agregarán por separado.
+
+### Primera versión
 
 | Inicio | Mis mascotas | Ficha de mascota |
 | --- | --- | --- |

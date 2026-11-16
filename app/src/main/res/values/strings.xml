@@ -1,4 +1,7 @@
 <resources>
+    <string name="cargando_mascotas">cargando mascotas...</string>
+    <string name="lista_sin_mascotas">aun no tienes mascotas. usa el boton + para registrar una.</string>
+    <string name="error_cargar_mascotas">no se pudieron cargar las mascotas. vuelve a abrir la lista.</string>
     <string name="acerca_titulo">Acerca de Sops</string>
     <string name="acerca_lema">Cada cuidado cuenta.</string>
     <string name="acerca_proposito">Pensado para su bienestar</string>

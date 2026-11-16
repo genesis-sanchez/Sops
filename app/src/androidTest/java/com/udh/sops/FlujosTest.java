@@ -6,6 +6,8 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 import com.udh.sops.controller.*;
 import com.udh.sops.model.DataSource;
+import com.udh.sops.model.Mascota;
+import com.udh.sops.model.SopsDatabase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static androidx.test.espresso.Espresso.onView;
@@ -43,33 +45,41 @@ public class FlujosTest {
     }
 
     @Test public void navegarDesdeInicio() {
-        abrir(MainActivity.class);
-        onView(withId(R.id.btnVerMascotas)).perform(scrollTo(), click());
-        onView(withText("Firulais")).perform(click());
-        onView(withId(R.id.tvNombreDetalle)).check(matches(withText("Firulais")));
-        onView(withId(R.id.btnVacunasMascota)).perform(scrollTo(), click());
-        onView(withId(R.id.tvMascotaVacunas)).check(matches(withText("Vacunas de Firulais")));
-        onView(withId(R.id.btnRegistrarVacuna)).perform(click());
-        onView(withId(R.id.etNombreVacuna)).check(matches(isDisplayed()));
-        pressBack();
-        pressBack();
-        onView(withId(R.id.btnHistorialMascota)).perform(scrollTo(), click());
-        onView(withId(R.id.btnRegistrarVisita)).perform(click());
-        onView(withId(R.id.etFechaVisita)).check(matches(isDisplayed()));
-        pressBack();
-        pressBack();
-        onView(withId(R.id.btnAlimentacionMascota)).perform(scrollTo(), click());
-        onView(withId(R.id.btnRegistrarAlimentacion)).perform(click());
-        onView(withId(R.id.etAlimento)).check(matches(isDisplayed()));
-        openActionBarOverflowOrOptionsMenu(contexto());
-        onView(withText(R.string.consejos_titulo)).perform(click());
-        onView(withText(R.string.consejos_perros)).check(matches(isDisplayed()));
-        openActionBarOverflowOrOptionsMenu(contexto());
-        onView(withText(R.string.acerca_titulo)).perform(click());
-        onView(withText(R.string.acerca_lema)).check(matches(isDisplayed()));
-        openActionBarOverflowOrOptionsMenu(contexto());
-        onView(withText(R.string.menu_inicio)).perform(click());
-        onView(withId(R.id.tvBienvenida)).check(matches(isDisplayed()));
+        Mascota registrada = new Mascota("revision " + System.nanoTime(), "Perro", "mestizo",
+                "2 años", "Hembra", true);
+        registrada.setId(SopsDatabase.obtenerInstancia(contexto()).mascotaDao().insertar(registrada));
+        try {
+            abrir(MainActivity.class);
+            onView(withId(R.id.btnVerMascotas)).perform(scrollTo(), click());
+            onView(withText(registrada.getNombre())).perform(click());
+            onView(withId(R.id.tvNombreDetalle)).check(matches(withText(registrada.getNombre())));
+            onView(withId(R.id.btnVacunasMascota)).perform(scrollTo(), click());
+            onView(withId(R.id.tvMascotaVacunas)).check(matches(withText(
+                    contexto().getString(R.string.vacunas_de, registrada.getNombre()))));
+            onView(withId(R.id.btnRegistrarVacuna)).perform(click());
+            onView(withId(R.id.etNombreVacuna)).check(matches(isDisplayed()));
+            pressBack();
+            pressBack();
+            onView(withId(R.id.btnHistorialMascota)).perform(scrollTo(), click());
+            onView(withId(R.id.btnRegistrarVisita)).perform(click());
+            onView(withId(R.id.etFechaVisita)).check(matches(isDisplayed()));
+            pressBack();
+            pressBack();
+            onView(withId(R.id.btnAlimentacionMascota)).perform(scrollTo(), click());
+            onView(withId(R.id.btnRegistrarAlimentacion)).perform(click());
+            onView(withId(R.id.etAlimento)).check(matches(isDisplayed()));
+            openActionBarOverflowOrOptionsMenu(contexto());
+            onView(withText(R.string.consejos_titulo)).perform(click());
+            onView(withText(R.string.consejos_perros)).check(matches(isDisplayed()));
+            openActionBarOverflowOrOptionsMenu(contexto());
+            onView(withText(R.string.acerca_titulo)).perform(click());
+            onView(withText(R.string.acerca_lema)).check(matches(isDisplayed()));
+            openActionBarOverflowOrOptionsMenu(contexto());
+            onView(withText(R.string.menu_inicio)).perform(click());
+            onView(withId(R.id.tvBienvenida)).check(matches(isDisplayed()));
+        } finally {
+            SopsDatabase.obtenerInstancia(contexto()).mascotaDao().eliminar(registrada);
+        }
     }
 
     @Test public void validarRegistroMascotaVacio() {
