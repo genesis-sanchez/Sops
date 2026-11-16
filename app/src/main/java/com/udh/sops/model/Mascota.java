@@ -1,8 +1,14 @@
 package com.udh.sops.model;
 
 import java.io.Serializable;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "mascotas")
 public class Mascota implements Serializable {
+    @PrimaryKey(autoGenerate = true)
+    private long id;
     private String nombre;
     private String tipo;
     private String raza;
@@ -11,6 +17,10 @@ public class Mascota implements Serializable {
     private boolean esterilizado;
     private String fechaNacimiento;
     private String peso;
+
+    public long getId() { return id; }
+
+    public void setId(long id) { this.id = id; }
 
     public Mascota(String nombre, String tipo, String raza, String edad, String sexo,
                    boolean esterilizado, String fechaNacimiento, String peso) {
@@ -23,6 +33,7 @@ public class Mascota implements Serializable {
 
     public String getPeso() { return peso; }
 
+    @Ignore
     public Mascota(String nombre, String tipo, String raza, String edad, String sexo, boolean esterilizado) {
         this.nombre = nombre;
         this.tipo = tipo;

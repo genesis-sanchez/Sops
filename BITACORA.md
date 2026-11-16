@@ -111,3 +111,11 @@
 **dificultad:** algunas pantallas no entran completas en una imagen.
 
 **solucion:** tome otra captura de la parte inferior para mostrar los campos y datos que faltaban.
+
+## 15 de noviembre de 2026 - preparar room
+
+**avance:** agregue room, converti Mascota en una entidad y cree MascotaDao y SopsDatabase. por ahora la base solo incluye mascotas.
+
+**dificultad:** entender cuando se crea el archivo de la base de datos.
+
+**solucion:** prepare la entidad, el dao y la database. el archivo se creara al abrir la base desde la app. falta conectar el formulario y la lista.
