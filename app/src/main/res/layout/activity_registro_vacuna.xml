@@ -7,7 +7,7 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="vertical" android:padding="24dp">
             <TextView android:id="@+id/tvMascotaRegistroVacuna" style="@style/Sops.TituloSeccion" />
-            <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
+            <TextView android:id="@+id/tvAvisoFormularioVacuna" style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
                 android:text="@string/vacuna_form_aviso" />
 
             <TextView style="@style/Sops.EtiquetaDato" android:text="@string/nombre_vacuna" />

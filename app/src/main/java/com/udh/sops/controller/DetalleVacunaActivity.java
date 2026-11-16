@@ -1,6 +1,7 @@
 package com.udh.sops.controller;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -54,6 +55,12 @@ public class DetalleVacunaActivity extends BaseActivity {
                             ? getString(R.string.sin_observaciones) : vacuna.getObservaciones());
                     mostrar(R.id.tvRecordatorioDetalleVacuna, getString(vacuna.isRecordatorio()
                             ? R.string.respuesta_si : R.string.respuesta_no));
+                    findViewById(R.id.btnEditarVacuna).setOnClickListener(view -> {
+                        Intent intent = new Intent(this, RegistroVacunaActivity.class);
+                        intent.putExtra(RegistroVacunaActivity.EXTRA_EDITAR_VACUNA_ID, vacuna.getId());
+                        intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
+                        startActivity(intent);
+                    });
                     findViewById(R.id.tvEstadoCargaVacuna).setVisibility(View.GONE);
                     findViewById(R.id.contenedorDetalleVacuna).setVisibility(View.VISIBLE);
                 });

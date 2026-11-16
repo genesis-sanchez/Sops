@@ -1,4 +1,7 @@
 <resources>
+    <string name="editar_vacuna">editar vacuna</string>
+    <string name="editar_vacuna_aviso">actualiza los datos de la vacuna.</string>
+    <string name="vacuna_actualizada">vacuna actualizada</string>
     <string name="detalle_vacuna_titulo">detalle de vacuna</string>
     <string name="estado_vacuna_label">estado</string>
     <string name="detalle_observaciones_vacuna">observaciones</string>

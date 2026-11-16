@@ -167,3 +167,11 @@
 **dificultad:** abrir la vacuna elegida desde la lista.
 
 **solucion:** pase su id con un intent y consulte sus datos en room.
+
+## 16 de noviembre de 2026 - editar vacuna
+
+**avance:** agregue el boton editar vacuna y cargue sus datos en el formulario.
+
+**dificultad:** guardar los cambios sin crear otra vacuna.
+
+**solucion:** use el mismo id para actualizar y al volver se muestran los datos nuevos.

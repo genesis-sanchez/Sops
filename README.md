@@ -13,6 +13,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Editar sus datos o eliminar su ficha con confirmación.
 - Guardar vacunas y consultar las que pertenecen a cada mascota.
 - Abrir el detalle de una vacuna para ver sus fechas, veterinario y observaciones.
+- Editar los datos de una vacuna guardada.
 - Revisar el historial médico y completar los datos de una visita.
 - Consultar y registrar los datos de alimentación.
 - Leer consejos de cuidado para perros y gatos.
@@ -25,7 +26,7 @@ En la ficha de una mascota guardada, **editar mascota** abre el formulario con s
 
 La huella de la barra abre la lista de mascotas y el signo **+** abre su registro. En los tres puntos están Inicio, Consejos y Acerca de Sops. La flecha y el botón Atrás permiten regresar a la pantalla anterior.
 
-En la lista de vacunas, al tocar una tarjeta se abre su detalle con los datos guardados y la mascota a la que pertenece.
+En la lista de vacunas, al tocar una tarjeta se abre su detalle con los datos guardados y la mascota a la que pertenece. El botón **editar vacuna** abre el formulario con sus datos actuales; al guardar los cambios, el detalle y la lista se actualizan.
 
 Los formularios indican si falta completar un campo obligatorio. Al guardar una mascota se abre su ficha; al guardar una vacuna se regresa a su lista. Los formularios de visitas y alimentación todavía muestran un resumen.
 
@@ -52,6 +53,7 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 | Al cerrar la app | Los datos ingresados se perdían. | Las mascotas registradas permanecen guardadas. |
 | Vacunas | Mostraba registros de ejemplo y el formulario solo mostraba un resumen. | Guarda las vacunas de la mascota seleccionada y actualiza su lista. |
 | Detalle de vacuna | Solo se podían ver los datos resumidos de la tarjeta. | Al tocarla se abre una pantalla con sus datos completos. |
+| Editar vacuna | No se podían cambiar los datos de una vacuna guardada. | El formulario carga sus datos y actualiza el mismo registro. |
 | Visitas y alimentación | Los formularios mostraban un resumen. | Mantienen ese funcionamiento; falta conectar su guardado. |
 
 Esta sección se irá ampliando con los siguientes avances.
@@ -59,6 +61,8 @@ Esta sección se irá ampliando con los siguientes avances.
 En vacunas primero se prepararon la entidad, su DAO y la tabla en la base de datos. Después se agregó la relación con las mascotas y se conectaron el formulario y la lista. Cada mascota muestra sus propias vacunas. Al eliminar una mascota también se eliminan sus vacunas, previa confirmación.
 
 El siguiente avance agregó la pantalla de detalle para consultar toda la información de una vacuna desde su tarjeta.
+
+Después se agregó la edición de vacunas, reutilizando el formulario y conservando la mascota a la que pertenece cada registro.
 
 ## Cómo abrir el proyecto
 
