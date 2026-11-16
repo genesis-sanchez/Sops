@@ -1,10 +1,18 @@
 <resources>
+    <string name="guardar_mascota_primero">primero guarda la mascota.</string>
+    <string name="vacunas_descripcion">aplicaciones y proximas fechas</string>
+    <string name="cargando_vacunas">cargando vacunas...</string>
+    <string name="error_cargar_vacunas">no se pudieron cargar las vacunas. vuelve a abrir la lista.</string>
+    <string name="guardar_vacuna">guardar vacuna</string>
+    <string name="guardando_vacuna">guardando...</string>
+    <string name="vacuna_guardada">vacuna guardada</string>
+    <string name="error_guardar_vacuna">no se pudo guardar la vacuna. intenta otra vez.</string>
     <string name="editar_mascota">editar mascota</string>
     <string name="guardar_cambios">guardar cambios</string>
     <string name="mascota_actualizada">datos actualizados</string>
     <string name="revisar_nacimiento">selecciona la fecha de nacimiento para continuar.</string>
     <string name="eliminar_mascota">eliminar mascota</string>
-    <string name="confirmar_eliminar_mascota">¿eliminar a %1$s? se borrara su ficha.</string>
+    <string name="confirmar_eliminar_mascota">¿eliminar a %1$s? se borraran su ficha y sus vacunas.</string>
     <string name="cancelar">cancelar</string>
     <string name="eliminar">eliminar</string>
     <string name="mascota_eliminada">mascota eliminada</string>
@@ -81,7 +89,7 @@
     <string name="menu_mascotas">mis mascotas</string>
     <string name="menu_registro">registrar mascota</string>
     <string name="registrar_vacuna">registrar vacuna</string>
-    <string name="vacuna_form_aviso">datos de la vacuna aplicada. no se guardaran.</string>
+    <string name="vacuna_form_aviso">datos de la vacuna aplicada.</string>
     <string name="nombre_vacuna">nombre de la vacuna</string>
     <string name="hint_vacuna">por ejemplo: antirrabica</string>
     <string name="numero_dosis">numero de dosis</string>

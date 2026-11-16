@@ -8,7 +8,7 @@
         android:orientation="vertical" android:padding="24dp">
         <TextView android:id="@+id/tvMascotaVacunas" style="@style/Sops.TituloSeccion" />
         <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
-            android:textSize="13sp" android:text="@string/vacunas_demo" />
+            android:textSize="13sp" android:text="@string/vacunas_descripcion" />
         <TextView android:id="@+id/tvSinVacunas" style="@style/Sops.Descripcion"
             android:layout_marginTop="20dp" android:text="@string/sin_vacunas" android:visibility="gone" />
     </LinearLayout>

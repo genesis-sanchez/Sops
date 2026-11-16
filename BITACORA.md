@@ -151,3 +151,11 @@
 **dificultad:** agregar la tabla sin borrar las mascotas guardadas.
 
 **solucion:** actualice la version de la base para crear la tabla de vacunas. falta relacionarla con mascotas y conectar las pantallas.
+
+## 16 de noviembre de 2026 - guardar vacunas por mascota
+
+**avance:** relacione las vacunas con mascotas y conecte su formulario y lista con room.
+
+**dificultad:** mostrar solo las vacunas de la mascota elegida.
+
+**solucion:** guarde el id de la mascota en cada vacuna y consulte la lista usando ese id.

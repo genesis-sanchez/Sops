@@ -1,13 +1,19 @@
 package com.udh.sops.model;
 
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "vacunas")
+@Entity(tableName = "vacunas",
+        foreignKeys = @ForeignKey(entity = Mascota.class, parentColumns = "id",
+                childColumns = "mascotaId", onDelete = ForeignKey.CASCADE),
+        indices = {@Index("mascotaId")})
 public class Vacuna {
     @PrimaryKey(autoGenerate = true)
     private long id;
+    private final Long mascotaId;
     private final String nombre;
     private final int dosis;
     private final String fecha;
@@ -22,8 +28,15 @@ public class Vacuna {
         this(nombre, dosis, fecha, proximaFecha, aplicada, null, null, false);
     }
 
+    @Ignore
     public Vacuna(String nombre, int dosis, String fecha, String proximaFecha,
                   boolean aplicada, String veterinario, String observaciones, boolean recordatorio) {
+        this(null, nombre, dosis, fecha, proximaFecha, aplicada, veterinario, observaciones, recordatorio);
+    }
+
+    public Vacuna(Long mascotaId, String nombre, int dosis, String fecha, String proximaFecha,
+                  boolean aplicada, String veterinario, String observaciones, boolean recordatorio) {
+        this.mascotaId = mascotaId;
         this.nombre = nombre;
         this.dosis = dosis;
         this.fecha = fecha;
@@ -36,6 +49,7 @@ public class Vacuna {
 
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
+    public Long getMascotaId() { return mascotaId; }
     public String getNombre() { return nombre; }
     public int getDosis() { return dosis; }
     public String getFecha() { return fecha; }

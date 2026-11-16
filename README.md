@@ -11,7 +11,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Ver la lista de mascotas y abrir la ficha de cada una.
 - Registrar y guardar una mascota en el celular.
 - Editar sus datos o eliminar su ficha con confirmación.
-- Consultar sus vacunas y llenar el formulario de una nueva vacuna.
+- Guardar vacunas y consultar las que pertenecen a cada mascota.
 - Revisar el historial médico y completar los datos de una visita.
 - Consultar y registrar los datos de alimentación.
 - Leer consejos de cuidado para perros y gatos.
@@ -24,11 +24,11 @@ En la ficha de una mascota guardada, **editar mascota** abre el formulario con s
 
 La huella de la barra abre la lista de mascotas y el signo **+** abre su registro. En los tres puntos están Inicio, Consejos y Acerca de Sops. La flecha y el botón Atrás permiten regresar a la pantalla anterior.
 
-Los formularios indican si falta completar un campo obligatorio. Al enviar los datos, se muestra una ficha o un resumen de lo ingresado.
+Los formularios indican si falta completar un campo obligatorio. Al guardar una mascota se abre su ficha; al guardar una vacuna se regresa a su lista. Los formularios de visitas y alimentación todavía muestran un resumen.
 
 ## Estado del proyecto
 
-El registro de mascotas ya guarda los datos en el celular y abre su ficha. Mis mascotas muestra los registros guardados y se actualiza al volver a la pantalla. También permite editar y eliminar mascotas. Los otros formularios aún no guardan datos y los recordatorios no envían avisos.
+El registro de mascotas ya guarda los datos en el celular y abre su ficha. Mis mascotas muestra los registros guardados y se actualiza al volver a la pantalla. También permite editar y eliminar mascotas. Las vacunas se guardan vinculadas a la mascota seleccionada y aparecen en su lista. Visitas y alimentación aún no guardan datos; los recordatorios no envían avisos.
 
 ## Antes y ahora
 
@@ -47,11 +47,12 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 | Editar mascota | No había una opción para cambiar sus datos. | Abre el formulario con los datos actuales y guarda los cambios en el mismo registro. |
 | Eliminar mascota | No se podían borrar mascotas desde la ficha. | Pide confirmación, elimina el registro y actualiza la lista. |
 | Al cerrar la app | Los datos ingresados se perdían. | Las mascotas registradas permanecen guardadas. |
-| Vacunas, visitas y alimentación | Los formularios mostraban un resumen. | Mantienen ese funcionamiento; falta conectar su guardado. |
+| Vacunas | Mostraba registros de ejemplo y el formulario solo mostraba un resumen. | Guarda las vacunas de la mascota seleccionada y actualiza su lista. |
+| Visitas y alimentación | Los formularios mostraban un resumen. | Mantienen ese funcionamiento; falta conectar su guardado. |
 
 Esta sección se irá ampliando con los siguientes avances.
 
-En vacunas se prepararon la entidad, su DAO y la tabla en la base de datos. La relación con las mascotas y el guardado desde el formulario quedan para los siguientes avances.
+En vacunas primero se prepararon la entidad, su DAO y la tabla en la base de datos. Después se agregó la relación con las mascotas y se conectaron el formulario y la lista. Cada mascota muestra sus propias vacunas. Al eliminar una mascota también se eliminan sus vacunas, previa confirmación.
 
 ## Cómo abrir el proyecto
 

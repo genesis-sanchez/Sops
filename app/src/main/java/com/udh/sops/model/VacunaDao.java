@@ -15,6 +15,9 @@ public interface VacunaDao {
     @Query("SELECT * FROM vacunas ORDER BY id DESC")
     List<Vacuna> obtenerTodas();
 
+    @Query("SELECT * FROM vacunas WHERE mascotaId = :mascotaId ORDER BY id DESC")
+    List<Vacuna> obtenerPorMascota(long mascotaId);
+
     @Query("SELECT * FROM vacunas WHERE id = :id")
     Vacuna obtenerPorId(long id);
 
