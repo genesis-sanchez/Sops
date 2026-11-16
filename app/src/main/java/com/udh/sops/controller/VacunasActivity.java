@@ -29,7 +29,8 @@ public class VacunasActivity extends BaseActivity {
         });
         ((TextView) findViewById(R.id.tvMascotaVacunas)).setText(
                 getString(R.string.vacunas_de, mascota.getNombre()));
-        boolean nueva = getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false);
+        boolean nueva = mascota.getId() > 0
+                || getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false);
         List<Vacuna> vacunas = nueva ? new ArrayList<>() : DataSource.getVacunasEjemplo(mascota);
         RecyclerView lista = findViewById(R.id.rvVacunas);
         lista.setLayoutManager(new LinearLayoutManager(this));

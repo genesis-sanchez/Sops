@@ -101,7 +101,7 @@
     <string name="vacuna_fechas">dosis: %1$d\n%2$s: %3$s\nproxima fecha: %4$s</string>
     <string name="sin_vacunas">Esta mascota todavía no tiene vacunas para mostrar.</string>
     <string name="registro_intro">Cuéntanos sobre tu mascota</string>
-    <string name="registro_aviso">completa los datos. no se guardaran.</string>
+    <string name="registro_aviso">completa los datos de tu mascota.</string>
     <string name="label_nombre">Nombre</string>
     <string name="label_raza">Raza</string>
     <string name="label_peso">Peso (kg)</string>
@@ -112,7 +112,10 @@
     <string name="sexo_macho">Macho</string>
     <string name="sexo_hembra">Hembra</string>
     <string name="esterilizado_opcion">Mi mascota está esterilizada</string>
-    <string name="enviar_mascota">Enviar y revisar ficha</string>
+    <string name="enviar_mascota">guardar mascota</string>
+    <string name="guardando_mascota">guardando...</string>
+    <string name="mascota_guardada">mascota guardada</string>
+    <string name="error_guardar_mascota">no se pudo guardar. intenta otra vez.</string>
     <string name="error_obligatorio">Completa este campo</string>
     <string name="error_peso">Ingresa un peso mayor que cero</string>
     <string name="error_registro">Revisa los campos y selecciona la especie, el sexo y la fecha de nacimiento.</string>

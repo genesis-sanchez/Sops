@@ -26,7 +26,8 @@ public class HistorialMedicoActivity extends BaseActivity {
         });
         ((TextView) findViewById(R.id.tvMascotaHistorial)).setText(
                 getString(R.string.historial_de, mascota.getNombre()));
-        if (getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false)) {
+        if (mascota.getId() > 0
+                || getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false)) {
             findViewById(R.id.tvSinHistorial).setVisibility(View.VISIBLE);
             return;
         }

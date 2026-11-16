@@ -10,9 +10,12 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.util.Log;
 import com.google.android.material.button.MaterialButton;
 import com.udh.sops.R;
 import com.udh.sops.model.Mascota;
+import com.udh.sops.model.SopsDatabase;
 import java.text.DateFormat;
 import java.util.Calendar;
 
@@ -112,10 +115,38 @@ public class RegistroMascotaActivity extends BaseActivity {
                 especie.getSelectedItem().toString(), raza.getText().toString().trim(), edad,
                 sexoElegido, ((CheckBox) findViewById(R.id.cbEsterilizado)).isChecked(),
                 fecha.getText().toString(), peso.getText().toString().trim());
-        Intent intent = new Intent(this, DetalleMascotaActivity.class);
-        intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
-        intent.putExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, true);
-        startActivity(intent);
+        guardarMascota(mascota);
+    }
+
+    private void guardarMascota(Mascota mascota) {
+        MaterialButton boton = findViewById(R.id.btnGuardarMascota);
+        if (!boton.isEnabled()) return;
+        boton.setEnabled(false);
+        boton.setText(R.string.guardando_mascota);
+        new Thread(() -> {
+            try {
+                long id = SopsDatabase.obtenerInstancia(getApplicationContext())
+                        .mascotaDao().insertar(mascota);
+                mascota.setId(id);
+                runOnUiThread(() -> {
+                    if (isFinishing() || isDestroyed()) return;
+                    Toast.makeText(this, R.string.mascota_guardada, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(this, DetalleMascotaActivity.class);
+                    intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
+                    startActivity(intent);
+                    finish();
+                });
+            } catch (Exception exception) {
+                Log.e("RegistroMascota", "No se pudo guardar la mascota", exception);
+                runOnUiThread(() -> {
+                    if (isFinishing() || isDestroyed()) return;
+                    boton.setEnabled(true);
+                    boton.setText(R.string.enviar_mascota);
+                    error.setText(R.string.error_guardar_mascota);
+                    error.setVisibility(View.VISIBLE);
+                });
+            }
+        }).start();
     }
 
     @Override

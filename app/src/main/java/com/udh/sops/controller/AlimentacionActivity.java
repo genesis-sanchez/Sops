@@ -24,7 +24,8 @@ public class AlimentacionActivity extends BaseActivity {
             startActivity(intent);
         });
         mostrar(R.id.tvMascotaAlimentacion, getString(R.string.alimentacion_de, mascota.getNombre()));
-        boolean nueva = getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false);
+        boolean nueva = mascota.getId() > 0
+                || getIntent().getBooleanExtra(DetalleMascotaActivity.EXTRA_REGISTRO_DEMO, false);
         Alimentacion alimentacion = nueva ? null : DataSource.getAlimentacionEjemplo(mascota);
         if (alimentacion == null) {
             findViewById(R.id.tarjetaAlimentacion).setVisibility(View.GONE);

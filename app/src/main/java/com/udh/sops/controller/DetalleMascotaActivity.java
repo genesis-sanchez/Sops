@@ -51,7 +51,9 @@ public class DetalleMascotaActivity extends BaseActivity {
             mostrar(R.id.tvNacimientoDetalle, mascota.getFechaNacimiento());
             mostrar(R.id.tvPesoDetalle, getString(R.string.peso_kg, mascota.getPeso()));
         }
-        if (getIntent().getBooleanExtra(EXTRA_REGISTRO_DEMO, false)) {
+        if (mascota.getId() > 0) {
+            findViewById(R.id.tvAvisoDetalle).setVisibility(View.GONE);
+        } else if (getIntent().getBooleanExtra(EXTRA_REGISTRO_DEMO, false)) {
             mostrar(R.id.tvAvisoDetalle, getString(R.string.confirmacion_demo));
         }
     }

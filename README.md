@@ -9,7 +9,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 ## Funciones desarrolladas
 
 - Ver la lista de mascotas y abrir la ficha de cada una.
-- Completar el registro de una mascota.
+- Registrar y guardar una mascota en el celular.
 - Consultar sus vacunas y llenar el formulario de una nueva vacuna.
 - Revisar el historial médico y completar los datos de una visita.
 - Consultar y registrar los datos de alimentación.
@@ -25,7 +25,7 @@ Los formularios indican si falta completar un campo obligatorio. Al enviar los d
 
 ## Estado del proyecto
 
-La versión actual incluye las pantallas y los formularios de las principales secciones. Por ahora, los datos ingresados no se guardan y los recordatorios no envían avisos.
+El registro de mascotas ya guarda los datos en el celular y abre su ficha. La lista todavía muestra las mascotas de ejemplo. Los otros formularios aún no guardan datos y los recordatorios no envían avisos.
 
 ## Cómo abrir el proyecto
 

@@ -119,3 +119,11 @@
 **dificultad:** entender cuando se crea el archivo de la base de datos.
 
 **solucion:** prepare la entidad, el dao y la database. el archivo se creara al abrir la base desde la app. falta conectar el formulario y la lista.
+
+## 16 de noviembre de 2026 - guardar mascota
+
+**avance:** conecte el formulario de mascotas con room.
+
+**dificultad:** abrir la ficha despues de guardar los datos.
+
+**solucion:** use el dao para guardar y pase la mascota a su ficha. falta mostrar los registros guardados en la lista.
