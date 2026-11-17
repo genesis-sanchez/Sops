@@ -114,3 +114,26 @@ Estas capturas corresponden a la primera versión de Sops. Se conservan para mos
 | Registro de mascota | Registro de vacuna | Acerca de Sops |
 | --- | --- | --- |
 | <img src="evidencias/capturas/04b_registro_mascota_continuacion.png" width="220" alt="Parte inferior del registro de mascota"> | <img src="evidencias/capturas/06b_registro_vacuna_continuacion.png" width="220" alt="Parte inferior del registro de vacuna"> | <img src="evidencias/capturas/12b_acerca_de_sops_continuacion.png" width="220" alt="Autora y versión de Sops"> |
+
+
+### Hito 2: mascotas y vacunas guardadas
+
+Estas capturas muestran el registro, la consulta, la edición y la eliminación de mascotas y vacunas. Los formularios contienen los datos ingresados durante el recorrido.
+
+| Registrar mascota | Ficha guardada | Editar mascota |
+| --- | --- | --- |
+| <img src="evidencias/capturas/hito2/03_registro_mascota.png" width="220" alt="Registrar mascota"> | <img src="evidencias/capturas/hito2/04_detalle_mascota.png" width="220" alt="Ficha guardada"> | <img src="evidencias/capturas/hito2/06_editar_mascota.png" width="220" alt="Editar mascota"> |
+
+| Registrar vacuna | Vacunas de la mascota | Detalle de vacuna |
+| --- | --- | --- |
+| <img src="evidencias/capturas/hito2/08_registro_vacuna.png" width="220" alt="Registrar vacuna"> | <img src="evidencias/capturas/hito2/09_lista_vacunas.png" width="220" alt="Vacunas de la mascota"> | <img src="evidencias/capturas/hito2/10_detalle_vacuna.png" width="220" alt="Detalle de vacuna"> |
+
+| Editar vacuna | Vacuna actualizada | Confirmar eliminación |
+| --- | --- | --- |
+| <img src="evidencias/capturas/hito2/11_editar_vacuna.png" width="220" alt="Editar vacuna"> | <img src="evidencias/capturas/hito2/12_vacuna_actualizada.png" width="220" alt="Vacuna actualizada"> | <img src="evidencias/capturas/hito2/13_eliminar_vacuna.png" width="220" alt="Confirmar eliminación"> |
+
+| Lista después de eliminar | Eliminar mascota | Consejos |
+| --- | --- | --- |
+| <img src="evidencias/capturas/hito2/14_lista_vacunas_actualizada.png" width="220" alt="Lista después de eliminar"> | <img src="evidencias/capturas/hito2/15_eliminar_mascota.png" width="220" alt="Eliminar mascota"> | <img src="evidencias/capturas/hito2/17_consejos.png" width="220" alt="Consejos"> |
+
+El resto de las imágenes está en la [carpeta de capturas del Hito 2](evidencias/capturas/hito2/). El video del recorrido incluye la escritura de los formularios y una breve explicación en pantalla de la organización del código. Se adjunta por separado en Classroom.

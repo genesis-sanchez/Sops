@@ -183,3 +183,12 @@
 **dificultad:** borrar solo la vacuna elegida y actualizar la lista.
 
 **solucion:** agregue una confirmacion y use el dao para eliminar el registro. al cancelar no se borra nada.
+
+
+## 17 de noviembre de 2026 - capturas y video
+
+**avance:** tome capturas y grabe el recorrido de mascotas y vacunas.
+
+**dificultad:** mostrar los formularios y los cambios guardados dentro del tiempo pedido.
+
+**solucion:** recorri el registro, la consulta, la edicion y la eliminacion. agregue una breve explicacion del codigo al final del video.
