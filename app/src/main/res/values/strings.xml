@@ -1,4 +1,8 @@
 <resources>
+    <string name="eliminar_vacuna">eliminar vacuna</string>
+    <string name="confirmar_eliminar_vacuna">¿eliminar la vacuna %1$s?</string>
+    <string name="vacuna_eliminada">vacuna eliminada</string>
+    <string name="error_eliminar_vacuna">no se pudo eliminar la vacuna. intenta otra vez.</string>
     <string name="editar_vacuna">editar vacuna</string>
     <string name="editar_vacuna_aviso">actualiza los datos de la vacuna.</string>
     <string name="vacuna_actualizada">vacuna actualizada</string>

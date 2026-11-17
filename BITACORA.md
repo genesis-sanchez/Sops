@@ -175,3 +175,11 @@
 **dificultad:** guardar los cambios sin crear otra vacuna.
 
 **solucion:** use el mismo id para actualizar y al volver se muestran los datos nuevos.
+
+## 17 de noviembre de 2026 - eliminar vacuna
+
+**avance:** agregue el boton eliminar vacuna en su detalle.
+
+**dificultad:** borrar solo la vacuna elegida y actualizar la lista.
+
+**solucion:** agregue una confirmacion y use el dao para eliminar el registro. al cancelar no se borra nada.
