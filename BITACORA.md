@@ -192,3 +192,11 @@
 **dificultad:** mostrar los formularios y los cambios guardados dentro del tiempo pedido.
 
 **solucion:** recorri el registro, la consulta, la edicion y la eliminacion. agregue una breve explicacion del codigo al final del video.
+
+## 17 de noviembre de 2026 - base de datos de visitas
+
+**avance:** prepare la entidad de visitas veterinarias, su dao y la tabla en room.
+
+**dificultad:** agregar la tabla sin perder las mascotas y vacunas guardadas.
+
+**solucion:** agregue la actualizacion de la base de datos a la version 4. el formulario todavia no guarda visitas.

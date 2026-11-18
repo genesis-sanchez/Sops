@@ -1,0 +1,104 @@
+erDiagram
+    usuarios ||--o{ mascotas : registra
+    mascotas |o--o{ vacunas : tiene
+    mascotas ||--o{ visitas_veterinarias : recibe
+    mascotas ||--o{ medicamentos : utiliza
+    mascotas ||--o{ alimentacion : tiene
+    mascotas ||--o{ recordatorios : tiene
+    vacunas |o--o{ recordatorios : genera
+    visitas_veterinarias |o--o{ medicamentos : indica
+    visitas_veterinarias |o--o{ recordatorios : genera
+    medicamentos |o--o{ recordatorios : genera
+    usuarios {
+        INTEGER id PK
+        TEXT nombre
+        TEXT correo UK
+        TEXT contrasenaHash
+        TEXT fechaRegistro
+    }
+    mascotas {
+        INTEGER id PK
+        INTEGER usuarioId FK
+        TEXT nombre
+        TEXT tipo
+        TEXT raza
+        TEXT edad
+        TEXT sexo
+        INTEGER esterilizado
+        TEXT fechaNacimiento
+        TEXT peso
+        TEXT fotoUri
+    }
+    vacunas {
+        INTEGER id PK
+        INTEGER mascotaId FK
+        TEXT nombre
+        INTEGER dosis
+        TEXT fecha
+        TEXT proximaFecha
+        INTEGER aplicada
+        TEXT veterinario
+        TEXT observaciones
+        INTEGER recordatorio
+    }
+    visitas_veterinarias {
+        INTEGER id PK
+        INTEGER mascotaId FK
+        TEXT fecha
+        TEXT motivo
+        TEXT diagnostico
+        TEXT tratamiento
+        TEXT veterinario
+        TEXT clinica
+        TEXT peso
+        TEXT proximaRevision
+        TEXT observaciones
+    }
+    medicamentos {
+        INTEGER id PK
+        INTEGER mascotaId FK
+        INTEGER visitaId FK
+        TEXT nombre
+        TEXT dosis
+        INTEGER intervaloHoras
+        TEXT fechaInicio
+        TEXT fechaFin
+        TEXT indicaciones
+        INTEGER activo
+    }
+    alimentacion {
+        INTEGER id PK
+        INTEGER mascotaId FK
+        TEXT nombreAlimento
+        TEXT tipoAlimento
+        TEXT cantidad
+        TEXT unidad
+        INTEGER vecesAlDia
+        TEXT horarios
+        TEXT fechaInicio
+        TEXT fechaFin
+        TEXT observaciones
+        INTEGER activo
+    }
+    recordatorios {
+        INTEGER id PK
+        INTEGER mascotaId FK
+        INTEGER vacunaId FK
+        INTEGER visitaId FK
+        INTEGER medicamentoId FK
+        TEXT titulo
+        TEXT descripcion
+        TEXT tipo
+        TEXT fechaHora
+        INTEGER intervaloHoras
+        INTEGER activo
+        INTEGER completado
+    }
+    consejos {
+        INTEGER id PK
+        TEXT especie
+        TEXT raza
+        TEXT categoria
+        TEXT titulo
+        TEXT contenido
+    }
