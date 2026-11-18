@@ -67,6 +67,15 @@
     <string name="observaciones_alimento_label">observaciones</string>
     <string name="sin_alimentacion">esta mascota aun no tiene datos de alimentacion.</string>
     <string name="registrar_visita">registrar visita</string>
+    <string name="guardar_visita">guardar visita</string>
+    <string name="guardando_visita">guardando...</string>
+    <string name="visita_guardada">visita guardada</string>
+    <string name="error_guardar_visita">no se pudo guardar la visita. intenta otra vez.</string>
+    <string name="cargando_visitas">cargando visitas...</string>
+    <string name="error_cargar_visitas">no se pudieron cargar las visitas. vuelve a abrir el historial.</string>
+    <string name="proxima_revision_opcional">proxima revision (opcional)</string>
+    <string name="proxima_revision_guardada">proxima revision: %1$s</string>
+    <string name="resumen_visita_guardada">diagnostico: %1$s\ntratamiento: %2$s</string>
     <string name="visita_de">visita de %1$s</string>
     <string name="fecha_visita">fecha de la visita</string>
     <string name="motivo_visita">motivo</string>

@@ -27,12 +27,16 @@
             <EditText android:id="@+id/etVeterinarioVisita" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="textCapWords"
                 android:hint="@string/hint_veterinario" android:maxLength="100" android:importantForAutofill="no" />
-            <CheckBox android:id="@+id/cbControlVisita" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="16dp"
-                android:text="@string/control_visita" />
+            <TextView style="@style/Sops.EtiquetaDato" android:text="@string/proxima_revision_opcional" />
+            <EditText android:id="@+id/etProximaRevision" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="date"
+                android:hint="@string/hint_fecha_vacuna" android:maxLength="10" android:importantForAutofill="no" />
+            <TextView android:id="@+id/tvErrorVisita" style="@style/Sops.Descripcion"
+                android:layout_marginTop="12dp" android:text="@string/error_guardar_visita"
+                android:visibility="gone" android:accessibilityLiveRegion="polite" />
             <com.google.android.material.button.MaterialButton android:id="@+id/btnEnviarVisita"
                 android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp"
-                android:layout_marginTop="24dp" android:text="@string/enviar_vacuna" />
+                android:layout_marginTop="24dp" android:text="@string/guardar_visita" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

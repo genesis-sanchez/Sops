@@ -200,3 +200,12 @@
 **dificultad:** agregar la tabla sin perder las mascotas y vacunas guardadas.
 
 **solucion:** agregue la actualizacion de la base de datos a la version 4. el formulario todavia no guarda visitas.
+
+
+## 17 de noviembre de 2026 - guardar y consultar visitas
+
+**avance:** conecte el formulario de visitas y el historial con room.
+
+**dificultad:** mostrar solo las visitas de la mascota elegida al regresar del formulario.
+
+**solucion:** guarde el id de la mascota y actualice el historial al volver. la proxima revision es opcional.

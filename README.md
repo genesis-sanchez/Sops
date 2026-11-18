@@ -15,7 +15,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Abrir el detalle de una vacuna para ver sus fechas, veterinario y observaciones.
 - Editar los datos de una vacuna guardada.
 - Eliminar una vacuna con confirmación.
-- Revisar el historial médico y completar los datos de una visita.
+- Guardar visitas veterinarias y consultarlas en el historial de cada mascota.
 - Consultar y registrar los datos de alimentación.
 - Leer consejos de cuidado para perros y gatos.
 
@@ -31,11 +31,11 @@ En la lista de vacunas, al tocar una tarjeta se abre su detalle con los datos gu
 
 En ese mismo detalle, **eliminar vacuna** permite borrar el registro después de confirmar. Al cancelar, la vacuna se conserva; al eliminarla, se regresa a la lista actualizada.
 
-Los formularios indican si falta completar un campo obligatorio. Al guardar una mascota se abre su ficha; al guardar una vacuna se regresa a su lista. Los formularios de visitas y alimentación todavía muestran un resumen.
+Los formularios indican si falta completar un campo obligatorio. Al guardar una mascota se abre su ficha; al guardar una vacuna se regresa a su lista. Al guardar una visita se regresa al historial actualizado de la mascota. El formulario de alimentación todavía muestra un resumen.
 
 ## Estado del proyecto
 
-El registro de mascotas ya guarda los datos en el celular y abre su ficha. Mis mascotas muestra los registros guardados y se actualiza al volver a la pantalla. También permite editar y eliminar mascotas. Las vacunas se guardan vinculadas a la mascota seleccionada y aparecen en su lista. Visitas y alimentación aún no guardan datos; los recordatorios no envían avisos.
+El registro de mascotas ya guarda los datos en el celular y abre su ficha. Mis mascotas muestra los registros guardados y se actualiza al volver a la pantalla. También permite editar y eliminar mascotas. Las vacunas se guardan vinculadas a la mascota seleccionada y aparecen en su lista. Las visitas también se guardan por mascota y se muestran en su historial. Alimentación aún no guarda datos; los recordatorios no envían avisos.
 
 ## Antes y ahora
 
@@ -58,7 +58,8 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 | Detalle de vacuna | Solo se podían ver los datos resumidos de la tarjeta. | Al tocarla se abre una pantalla con sus datos completos. |
 | Editar vacuna | No se podían cambiar los datos de una vacuna guardada. | El formulario carga sus datos y actualiza el mismo registro. |
 | Eliminar vacuna | No había una opción para borrar una vacuna. | Pide confirmación y elimina solo la vacuna seleccionada. |
-| Visitas y alimentación | Los formularios mostraban un resumen. | Mantienen ese funcionamiento; falta conectar su guardado. |
+| Visitas veterinarias | El formulario mostraba un resumen sin guardar. | Guarda la visita y actualiza el historial de la mascota. |
+| Alimentación | El formulario mostraba un resumen. | Mantiene ese funcionamiento; falta conectar su guardado. |
 
 Esta sección se irá ampliando con los siguientes avances.
 

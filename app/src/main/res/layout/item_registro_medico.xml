@@ -9,5 +9,7 @@
         <TextView style="@style/Sops.EtiquetaDato" android:text="@string/veterinario" />
         <TextView android:id="@+id/tvVeterinarioConsulta" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
         <TextView android:id="@+id/tvObservacionesConsulta" style="@style/Sops.Descripcion" android:layout_marginTop="16dp" />
+        <TextView android:id="@+id/tvProximaRevisionConsulta" style="@style/Sops.Descripcion"
+            android:layout_marginTop="12dp" android:visibility="gone" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
