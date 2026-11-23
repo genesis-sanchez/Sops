@@ -83,6 +83,11 @@ public class HistorialMedicoActivity extends BaseActivity {
             proxima.setText(getString(R.string.proxima_revision_guardada, visita.getProximaRevision()));
             proxima.setVisibility(View.VISIBLE);
         }
+        tarjeta.setOnClickListener(view -> {
+            Intent intent = new Intent(this, DetalleVisitaActivity.class);
+            intent.putExtra(DetalleVisitaActivity.EXTRA_VISITA_ID, visita.getId());
+            startActivity(intent);
+        });
         registros.addView(tarjeta);
     }
 }

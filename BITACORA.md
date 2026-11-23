@@ -209,3 +209,12 @@
 **dificultad:** mostrar solo las visitas de la mascota elegida al regresar del formulario.
 
 **solucion:** guarde el id de la mascota y actualice el historial al volver. la proxima revision es opcional.
+
+
+## 23 de noviembre de 2026 - detalle de visita
+
+**avance:** agregue el detalle de las visitas desde el historial de cada mascota.
+
+**dificultad:** abrir los datos de la visita seleccionada.
+
+**solucion:** pase su id con un intent y consulte la informacion en room.

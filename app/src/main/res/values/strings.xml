@@ -68,6 +68,14 @@
     <string name="sin_alimentacion">esta mascota aun no tiene datos de alimentacion.</string>
     <string name="registrar_visita">registrar visita</string>
     <string name="guardar_visita">guardar visita</string>
+    <string name="detalle_visita_titulo">detalle de visita</string>
+    <string name="cargando_detalle_visita">cargando visita...</string>
+    <string name="visita_no_encontrada">esta visita ya no esta disponible.</string>
+    <string name="error_cargar_detalle_visita">no se pudo cargar la visita. vuelve a abrirla.</string>
+    <string name="clinica_visita">clinica</string>
+    <string name="peso_visita">peso (kg)</string>
+    <string name="proxima_revision_visita">proxima revision</string>
+    <string name="observaciones_visita">observaciones</string>
     <string name="guardando_visita">guardando...</string>
     <string name="visita_guardada">visita guardada</string>
     <string name="error_guardar_visita">no se pudo guardar la visita. intenta otra vez.</string>
