@@ -70,6 +70,10 @@
     <string name="guardar_visita">guardar visita</string>
     <string name="detalle_visita_titulo">detalle de visita</string>
     <string name="editar_visita">editar visita</string>
+    <string name="eliminar_visita">eliminar visita</string>
+    <string name="confirmar_eliminar_visita">¿eliminar la visita del %1$s?</string>
+    <string name="visita_eliminada">visita eliminada</string>
+    <string name="error_eliminar_visita">no se pudo eliminar la visita. intenta otra vez.</string>
     <string name="visita_actualizada">visita actualizada</string>
     <string name="cargando_detalle_visita">cargando visita...</string>
     <string name="visita_no_encontrada">esta visita ya no esta disponible.</string>

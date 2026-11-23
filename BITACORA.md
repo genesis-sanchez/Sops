@@ -227,3 +227,12 @@
 **dificultad:** guardar los cambios sin duplicar la visita.
 
 **solucion:** use el mismo id para actualizar y al volver se muestran los datos nuevos.
+
+
+## 23 de noviembre de 2026 - eliminar visita
+
+**avance:** agregue el boton eliminar visita desde su detalle.
+
+**dificultad:** borrar solo la visita elegida y actualizar el historial.
+
+**solucion:** agregue una confirmacion y elimine usando su id. al cancelar se conserva la visita.
