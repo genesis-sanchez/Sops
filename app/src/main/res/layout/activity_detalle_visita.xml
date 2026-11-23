@@ -35,6 +35,10 @@
                         <TextView android:id="@+id/tvObservacionesDetalleVisita" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnEditarVisita"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp" android:minHeight="48dp"
+                    android:text="@string/editar_visita" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

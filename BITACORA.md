@@ -218,3 +218,12 @@
 **dificultad:** abrir los datos de la visita seleccionada.
 
 **solucion:** pase su id con un intent y consulte la informacion en room.
+
+
+## 23 de noviembre de 2026 - editar visita
+
+**avance:** agregue el boton editar y cargue los datos de la visita en el formulario.
+
+**dificultad:** guardar los cambios sin duplicar la visita.
+
+**solucion:** use el mismo id para actualizar y al volver se muestran los datos nuevos.

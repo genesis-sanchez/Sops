@@ -1,6 +1,7 @@
 package com.udh.sops.controller;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -49,6 +50,12 @@ public class DetalleVisitaActivity extends BaseActivity {
                     mostrar(R.id.tvPesoDetalleVisita, visita.getPeso());
                     mostrar(R.id.tvProximaDetalleVisita, visita.getProximaRevision());
                     mostrar(R.id.tvObservacionesDetalleVisita, visita.getObservaciones());
+                    findViewById(R.id.btnEditarVisita).setOnClickListener(view -> {
+                        Intent intent = new Intent(this, RegistroVisitaActivity.class);
+                        intent.putExtra(RegistroVisitaActivity.EXTRA_EDITAR_VISITA_ID, visita.getId());
+                        intent.putExtra(DetalleMascotaActivity.EXTRA_MASCOTA, mascota);
+                        startActivity(intent);
+                    });
                     findViewById(R.id.tvEstadoCargaVisita).setVisibility(View.GONE);
                     findViewById(R.id.contenedorDetalleVisita).setVisibility(View.VISIBLE);
                 });

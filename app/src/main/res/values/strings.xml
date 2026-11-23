@@ -69,6 +69,8 @@
     <string name="registrar_visita">registrar visita</string>
     <string name="guardar_visita">guardar visita</string>
     <string name="detalle_visita_titulo">detalle de visita</string>
+    <string name="editar_visita">editar visita</string>
+    <string name="visita_actualizada">visita actualizada</string>
     <string name="cargando_detalle_visita">cargando visita...</string>
     <string name="visita_no_encontrada">esta visita ya no esta disponible.</string>
     <string name="error_cargar_detalle_visita">no se pudo cargar la visita. vuelve a abrirla.</string>
