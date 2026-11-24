@@ -262,4 +262,10 @@
     <string name="hint_raza">Raza</string>
     <string name="msg_campos_vacios">Completa todos los campos obligatorios</string>
     <string name="msg_exito">Registro guardado exitosamente</string>
+    <string name="editar_alimentacion">editar alimentacion</string>
+    <string name="alimentacion_actualizada">alimentacion actualizada</string>
+    <string name="eliminar_alimentacion">eliminar alimentacion</string>
+    <string name="confirmar_eliminar_alimentacion">¿eliminar el registro de %1$s?</string>
+    <string name="alimentacion_eliminada">registro eliminado</string>
+    <string name="error_eliminar_alimentacion">no se pudo eliminar el registro. intenta otra vez.</string>
 </resources>

@@ -262,3 +262,12 @@
 **dificultad:** abrir el registro elegido desde la lista.
 
 **solucion:** pase su id con un intent y consulte sus datos en room.
+
+
+## 24 de noviembre de 2026 - editar y eliminar alimentacion
+
+**avance:** agregue las opciones de editar y eliminar desde el detalle.
+
+**dificultad:** actualizar el mismo registro y borrar solo el elegido.
+
+**solucion:** use su id para guardar los cambios y agregue una confirmacion antes de eliminar.

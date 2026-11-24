@@ -35,6 +35,13 @@
                         <TextView android:id="@+id/tvEstadoDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnEditarAlimentacion"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp" android:minHeight="48dp" android:text="@string/editar_alimentacion" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnEliminarAlimentacion"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:minHeight="48dp" android:textColor="?attr/colorError" android:text="@string/eliminar_alimentacion" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

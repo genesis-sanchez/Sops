@@ -21,6 +21,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Eliminar una visita con confirmación.
 - Guardar la alimentación y consultar los registros de cada mascota.
 - Tocar un registro de alimentación para ver su detalle.
+- Editar la alimentación guardada o eliminarla con confirmación.
 - Leer consejos de cuidado para perros y gatos.
 
 ## Funcionamiento
@@ -70,6 +71,8 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 | Eliminar visita | No se podían borrar visitas desde su detalle. | Pide confirmación y actualiza el historial al eliminar la visita. |
 | Alimentación | El formulario mostraba un resumen sin guardar. | Guarda los registros por mascota y actualiza su lista al regresar. |
 | Detalle de alimentación | Los datos aparecían en las tarjetas de la lista. | Al tocar una tarjeta se abre el detalle del registro guardado. |
+| Editar alimentación | No se podían cambiar los registros guardados. | Carga los datos en el formulario y actualiza el mismo registro. |
+| Eliminar alimentación | No se podían borrar registros desde su detalle. | Pide confirmación y regresa a la lista actualizada. |
 
 Esta sección se irá ampliando con los siguientes avances.
 
@@ -148,3 +151,5 @@ Estas capturas muestran el registro, la consulta, la edición y la eliminación 
 | <img src="evidencias/capturas/hito2/14_lista_vacunas_actualizada.png" width="220" alt="Lista después de eliminar"> | <img src="evidencias/capturas/hito2/15_eliminar_mascota.png" width="220" alt="Eliminar mascota"> | <img src="evidencias/capturas/hito2/17_consejos.png" width="220" alt="Consejos"> |
 
 El resto de las imágenes está en la [carpeta de capturas del Hito 2](evidencias/capturas/hito2/). El video del recorrido incluye la escritura de los formularios y una breve explicación en pantalla de la organización del código. Se adjunta por separado en Classroom.
+
+Desde el detalle de alimentación se puede editar el registro usando el mismo formulario. Al eliminar, se pide confirmación y se regresa a la lista actualizada.
