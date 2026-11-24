@@ -236,3 +236,11 @@
 **dificultad:** borrar solo la visita elegida y actualizar el historial.
 
 **solucion:** agregue una confirmacion y elimine usando su id. al cancelar se conserva la visita.
+
+## 24 de noviembre de 2026 - base de datos de alimentacion
+
+**avance:** prepare la entidad de alimentacion, su dao y la tabla en room.
+
+**dificultad:** agregar la tabla sin perder los registros anteriores.
+
+**solucion:** actualice la base a la version 5 y relacione cada registro con su mascota. el formulario todavia no guarda datos.
