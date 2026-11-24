@@ -9,22 +9,9 @@
             <TextView android:id="@+id/tvMascotaAlimentacion" style="@style/Sops.TituloSeccion" />
             <TextView android:id="@+id/tvSinAlimentacion" style="@style/Sops.Descripcion"
                 android:layout_marginTop="20dp" android:text="@string/sin_alimentacion" android:visibility="gone" />
-            <com.google.android.material.card.MaterialCardView android:id="@+id/tarjetaAlimentacion"
-                style="@style/Sops.Tarjeta" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:layout_marginTop="24dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="vertical" android:padding="20dp">
-                    <TextView style="@style/Sops.Descripcion" android:text="@string/alimento_label" />
-                    <TextView android:id="@+id/tvAlimento" style="@style/Sops.ValorDato" />
-                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/cantidad_alimento_label" />
-                    <TextView android:id="@+id/tvCantidadAlimento" style="@style/Sops.ValorDato" />
-                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/horarios_alimento_label" />
-                    <TextView android:id="@+id/tvHorariosAlimento" style="@style/Sops.ValorDato" />
-                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/observaciones_alimento_label" />
-                    <TextView android:id="@+id/tvObservacionesAlimento" style="@style/Sops.Descripcion"
-                        android:layout_marginTop="4dp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout android:id="@+id/contenedorAlimentacion"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:orientation="vertical" />
         </LinearLayout>
     </ScrollView>
     <com.google.android.material.button.MaterialButton android:id="@+id/btnRegistrarAlimentacion"

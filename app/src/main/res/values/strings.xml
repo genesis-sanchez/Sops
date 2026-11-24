@@ -45,6 +45,32 @@
     <string name="acerca_version_label">Versión</string>
     <string name="acerca_version">1.0</string>
     <string name="registrar_alimentacion">registrar alimentacion</string>
+    <string name="guardar_alimentacion">guardar alimentacion</string>
+    <string name="guardando_alimentacion">guardando...</string>
+    <string name="alimentacion_guardada">alimentacion guardada</string>
+    <string name="error_guardar_alimentacion">no se pudo guardar. intenta otra vez.</string>
+    <string name="cargando_alimentacion">cargando alimentacion...</string>
+    <string name="error_cargar_alimentacion">no se pudo cargar la alimentacion. vuelve a abrir la lista.</string>
+    <string name="tipo_alimento_label">tipo de alimento</string>
+    <string name="veces_al_dia_label">veces al dia</string>
+    <string-array name="tipos_alimento">
+        <item>selecciona un tipo</item>
+        <item>seco</item>
+        <item>humedo</item>
+        <item>casero</item>
+        <item>mixto</item>
+    </string-array>
+    <string-array name="veces_alimento">
+        <item>selecciona la cantidad de comidas</item>
+        <item>1 vez al dia</item>
+        <item>2 veces al dia</item>
+        <item>3 veces al dia</item>
+        <item>4 veces al dia</item>
+    </string-array>
+    <plurals name="veces_al_dia_guardadas">
+        <item quantity="one">%1$d vez al dia</item>
+        <item quantity="other">%1$d veces al dia</item>
+    </plurals>
     <string name="hint_alimento">nombre del alimento</string>
     <string name="hint_cantidad_alimento">por ejemplo: 1 porcion</string>
     <string name="hint_horarios_alimento">por ejemplo: 08:00 y 18:00</string>

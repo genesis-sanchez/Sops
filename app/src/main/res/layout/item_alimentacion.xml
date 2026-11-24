@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tarjetaAlimentacion"
+                style="@style/Sops.Tarjeta" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <TextView style="@style/Sops.Descripcion" android:text="@string/alimento_label" />
+                    <TextView android:id="@+id/tvAlimento" style="@style/Sops.ValorDato" />
+                    <TextView android:id="@+id/tvTipoAlimentoGuardado" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/cantidad_alimento_label" />
+                    <TextView android:id="@+id/tvCantidadAlimento" style="@style/Sops.ValorDato" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/horarios_alimento_label" />
+                    <TextView android:id="@+id/tvHorariosAlimento" style="@style/Sops.ValorDato" />
+                    <TextView android:id="@+id/tvFrecuenciaAlimentoGuardada" style="@style/Sops.Descripcion" android:layout_marginTop="8dp" />
+                    <TextView style="@style/Sops.EtiquetaDato" android:text="@string/observaciones_alimento_label" />
+                    <TextView android:id="@+id/tvObservacionesAlimento" style="@style/Sops.Descripcion"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>

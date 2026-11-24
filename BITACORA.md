@@ -244,3 +244,12 @@
 **dificultad:** agregar la tabla sin perder los registros anteriores.
 
 **solucion:** actualice la base a la version 5 y relacione cada registro con su mascota. el formulario todavia no guarda datos.
+
+
+## 24 de noviembre de 2026 - guardar y consultar alimentacion
+
+**avance:** conecte el formulario y la lista de alimentacion con room.
+
+**dificultad:** guardar los registros de cada mascota y mostrarlos al volver.
+
+**solucion:** use el id de la mascota y actualice la lista al regresar. tambien agregue el tipo de alimento y las veces al dia.

@@ -20,19 +20,23 @@
                 android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="text"
                 android:hint="@string/hint_horarios_alimento" android:maxLength="100" android:importantForAutofill="no" />
             <TextView android:id="@+id/tvFrecuenciaAlimento" style="@style/Sops.EtiquetaDato"
-                android:text="@string/frecuencia_alimento_label" android:labelFor="@id/spFrecuenciaAlimento" />
+                android:text="@string/veces_al_dia_label" android:labelFor="@id/spFrecuenciaAlimento" />
             <Spinner android:id="@+id/spFrecuenciaAlimento" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:minHeight="48dp" android:spinnerMode="dropdown" />
-            <CheckBox android:id="@+id/cbDietaEspecial" android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="16dp"
-                android:text="@string/dieta_especial" />
+            <TextView android:id="@+id/tvTipoAlimento" style="@style/Sops.EtiquetaDato"
+                android:text="@string/tipo_alimento_label" android:labelFor="@id/spTipoAlimento" />
+            <Spinner android:id="@+id/spTipoAlimento" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:spinnerMode="dropdown" />
             <TextView style="@style/Sops.EtiquetaDato" android:text="@string/observaciones_alimento_label" />
             <EditText android:id="@+id/etObservacionesAlimento" android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:minHeight="80dp" android:inputType="textMultiLine"
                 android:hint="@string/hint_observaciones_alimento" android:maxLength="300" android:importantForAutofill="no" />
+            <TextView android:id="@+id/tvErrorAlimentacion" style="@style/Sops.Descripcion"
+                android:layout_marginTop="12dp" android:text="@string/error_guardar_alimentacion"
+                android:visibility="gone" android:accessibilityLiveRegion="polite" />
             <com.google.android.material.button.MaterialButton android:id="@+id/btnEnviarAlimentacion"
                 android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp"
-                android:layout_marginTop="24dp" android:text="@string/enviar_vacuna" />
+                android:layout_marginTop="24dp" android:text="@string/guardar_alimentacion" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
