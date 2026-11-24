@@ -46,6 +46,15 @@
     <string name="acerca_version">1.0</string>
     <string name="registrar_alimentacion">registrar alimentacion</string>
     <string name="guardar_alimentacion">guardar alimentacion</string>
+    <string name="detalle_alimentacion_titulo">detalle de alimentacion</string>
+    <string name="cargando_detalle_alimentacion">cargando registro...</string>
+    <string name="alimentacion_no_encontrada">este registro ya no esta disponible.</string>
+    <string name="error_cargar_detalle_alimentacion">no se pudo cargar el registro. vuelve a abrirlo.</string>
+    <string name="inicio_alimentacion_label">fecha de inicio</string>
+    <string name="fin_alimentacion_label">fecha de fin</string>
+    <string name="estado_alimentacion_label">estado</string>
+    <string name="alimentacion_activa">activo</string>
+    <string name="alimentacion_inactiva">inactivo</string>
     <string name="guardando_alimentacion">guardando...</string>
     <string name="alimentacion_guardada">alimentacion guardada</string>
     <string name="error_guardar_alimentacion">no se pudo guardar. intenta otra vez.</string>

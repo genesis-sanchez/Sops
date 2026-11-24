@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/tvEstadoCargaAlimentacion" style="@style/Sops.Descripcion"
+                android:accessibilityLiveRegion="polite" android:text="@string/cargando_detalle_alimentacion" />
+            <LinearLayout android:id="@+id/contenedorDetalleAlimentacion"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone">
+                <TextView android:id="@+id/tvNombreDetalleAlimentacion" style="@style/Sops.TituloSeccion" android:textSize="28sp" />
+                <TextView android:id="@+id/tvMascotaDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="8dp" />
+                <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="20dp">
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/tipo_alimento_label" />
+                        <TextView android:id="@+id/tvTipoDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/cantidad_alimento_label" />
+                        <TextView android:id="@+id/tvCantidadDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/horarios_alimento_label" />
+                        <TextView android:id="@+id/tvHorariosDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/veces_al_dia_label" />
+                        <TextView android:id="@+id/tvFrecuenciaDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/observaciones_alimento_label" />
+                        <TextView android:id="@+id/tvObservacionesDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/inicio_alimentacion_label" />
+                        <TextView android:id="@+id/tvInicioDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/fin_alimentacion_label" />
+                        <TextView android:id="@+id/tvFinDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                        <TextView style="@style/Sops.EtiquetaDato" android:text="@string/estado_alimentacion_label" />
+                        <TextView android:id="@+id/tvEstadoDetalleAlimentacion" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

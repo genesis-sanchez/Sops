@@ -20,6 +20,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Editar una visita guardada desde su detalle.
 - Eliminar una visita con confirmación.
 - Guardar la alimentación y consultar los registros de cada mascota.
+- Tocar un registro de alimentación para ver su detalle.
 - Leer consejos de cuidado para perros y gatos.
 
 ## Funcionamiento
@@ -68,6 +69,7 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 | Editar visita | No se podían modificar las visitas guardadas. | Carga los datos en el formulario y actualiza la misma visita. |
 | Eliminar visita | No se podían borrar visitas desde su detalle. | Pide confirmación y actualiza el historial al eliminar la visita. |
 | Alimentación | El formulario mostraba un resumen sin guardar. | Guarda los registros por mascota y actualiza su lista al regresar. |
+| Detalle de alimentación | Los datos aparecían en las tarjetas de la lista. | Al tocar una tarjeta se abre el detalle del registro guardado. |
 
 Esta sección se irá ampliando con los siguientes avances.
 

@@ -12,6 +12,7 @@
         android:theme="@style/Theme.Sops">
         <activity android:name=".controller.DetalleVacunaActivity" android:exported="false" />
         <activity android:name=".controller.DetalleVisitaActivity" android:exported="false" />
+        <activity android:name=".controller.DetalleAlimentacionActivity" android:exported="false" />
         <activity android:name=".controller.AcercaActivity" android:exported="false" />
         <activity android:name=".controller.RegistroAlimentacionActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".controller.AlimentacionActivity" android:exported="false" />

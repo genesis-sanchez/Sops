@@ -253,3 +253,12 @@
 **dificultad:** guardar los registros de cada mascota y mostrarlos al volver.
 
 **solucion:** use el id de la mascota y actualice la lista al regresar. tambien agregue el tipo de alimento y las veces al dia.
+
+
+## 24 de noviembre de 2026 - detalle de alimentacion
+
+**avance:** agregue el detalle de alimentacion al tocar una tarjeta.
+
+**dificultad:** abrir el registro elegido desde la lista.
+
+**solucion:** pase su id con un intent y consulte sus datos en room.

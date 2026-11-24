@@ -82,6 +82,11 @@ public class AlimentacionActivity extends BaseActivity {
         String notas = alimentacion.getObservaciones();
         ((TextView) tarjeta.findViewById(R.id.tvObservacionesAlimento)).setText(
                 notas == null || notas.trim().isEmpty() ? getString(R.string.sin_observaciones) : notas);
+        tarjeta.setOnClickListener(view -> {
+            Intent intent = new Intent(this, DetalleAlimentacionActivity.class);
+            intent.putExtra(DetalleAlimentacionActivity.EXTRA_ALIMENTACION_ID, alimentacion.getId());
+            startActivity(intent);
+        });
         registros.addView(tarjeta);
     }
 
