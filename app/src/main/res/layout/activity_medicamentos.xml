@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contenedorPantalla" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/barra_superior" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/tvMascotaMedicamentos" style="@style/Sops.TituloSeccion" />
+            <TextView android:id="@+id/tvSinMedicamentos" style="@style/Sops.Descripcion"
+                android:layout_marginTop="20dp" android:text="@string/sin_medicamentos" android:visibility="gone" />
+            <LinearLayout android:id="@+id/contenedorMedicamentos"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnRegistrarMedicamento"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginStart="24dp" android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp" android:minHeight="48dp" android:text="@string/registrar_medicamento" />
+</LinearLayout>

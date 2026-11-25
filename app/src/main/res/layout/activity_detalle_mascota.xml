@@ -55,6 +55,9 @@
                 android:id="@+id/btnAlimentacionMascota" style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:minHeight="48dp" android:text="@string/alimentacion_titulo" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnMedicamentosMascota"
+                style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/medicamentos_titulo" />
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEditarMascota" style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -67,6 +70,7 @@
                 android:visibility="gone" android:text="@string/eliminar_mascota" />
             <TextView android:id="@+id/tvAvisoDetalle" style="@style/Sops.Descripcion" android:layout_marginTop="20dp"
                 android:textSize="13sp" android:text="@string/datos_ejemplo" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

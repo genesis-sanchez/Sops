@@ -288,4 +288,25 @@
     <string name="elegir_foto">elegir foto</string>
     <string name="quitar_foto">quitar foto</string>
     <string name="error_elegir_foto">no se pudo abrir la foto. elige otra.</string>
+    <string name="medicamentos_titulo">medicamentos</string>
+    <string name="medicamentos_de">medicamentos de %1$s</string>
+    <string name="registrar_medicamento">registrar medicamento</string>
+    <string name="guardar_medicamento">guardar medicamento</string>
+    <string name="guardando_medicamento">guardando...</string>
+    <string name="medicamento_guardado">medicamento guardado</string>
+    <string name="cargando_medicamentos">cargando medicamentos...</string>
+    <string name="sin_medicamentos">esta mascota aun no tiene medicamentos registrados.</string>
+    <string name="error_cargar_medicamentos">no se pudieron cargar los medicamentos. vuelve a abrir la lista.</string>
+    <string name="error_guardar_medicamento">no se pudo guardar el medicamento. intenta otra vez.</string>
+    <string name="nombre_medicamento">nombre</string>
+    <string name="dosis_medicamento">dosis</string>
+    <string name="intervalo_medicamento">cada cuantas horas</string>
+    <string name="inicio_medicamento">fecha de inicio</string>
+    <string name="fin_medicamento">fecha de fin</string>
+    <string name="indicaciones_medicamento">indicaciones (opcional)</string>
+    <string name="medicamento_activo">tratamiento activo</string>
+    <string name="error_intervalo_medicamento">ingresa un numero de horas mayor que cero.</string>
+    <string name="error_fecha_medicamento">ingresa una fecha valida: dd/mm/aaaa.</string>
+    <string name="error_fin_medicamento">la fecha de fin no puede ser anterior al inicio.</string>
+    <string name="resumen_medicamento_guardado">dosis: %1$s\ncada %2$d horas\ninicio: %3$s\nfin: %4$s</string>
 </resources>

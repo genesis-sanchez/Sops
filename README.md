@@ -161,3 +161,5 @@ Desde el detalle de alimentación se puede editar el registro usando el mismo fo
 El panel de Inicio muestra el total de mascotas, las vacunas programadas y las próximas revisiones. Los cuidados se ordenan por fecha e indican si están vencidos, corresponden a hoy o son próximos. Las fechas que no se pueden interpretar aparecen para revisión. Tocar el cuidado abre su detalle y tocar el nombre abre la ficha de la mascota. El panel se actualiza al regresar y muestra un mensaje cuando no hay registros programados.
 
 La foto de la mascota es opcional. Se elige con el selector de archivos del celular y se conserva al guardar. Si se quita la foto o el archivo deja de estar disponible, se muestra la huella de Sops.
+
+Desde la ficha de cada mascota se abre Medicamentos. El formulario guarda nombre, dosis, intervalo en horas, fechas de inicio y fin e indicaciones. La lista se actualiza al regresar y muestra solo los medicamentos de esa mascota. Todavía falta agregar detalle, edición, eliminación y avisos.

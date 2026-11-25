@@ -315,3 +315,12 @@
 **dificultad:** relacionar cada medicamento con su mascota y una visita opcional.
 
 **solucion:** agregue las relaciones y actualice la base a la version 7. todavia falta conectar las pantallas.
+
+
+## 25 de noviembre de 2026 - guardar y consultar medicamentos
+
+**avance:** agregue el formulario y la lista de medicamentos desde la ficha de la mascota.
+
+**dificultad:** guardar cada tratamiento en la mascota correcta y revisar las fechas.
+
+**solucion:** use su id para guardar y consultar. valide las horas y que la fecha de fin no sea anterior al inicio.

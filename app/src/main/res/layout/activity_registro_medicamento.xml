@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/contenedorPantalla"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+ <include layout="@layout/barra_superior" />
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+   <TextView android:id="@+id/tvMascotaRegistroMedicamento" style="@style/Sops.TituloSeccion" />
+   <TextView style="@style/Sops.EtiquetaDato" android:text="@string/nombre_medicamento" android:labelFor="@id/etNombreMedicamento" />
+   <EditText android:id="@+id/etNombreMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="text" android:maxLength="100" android:importantForAutofill="no" />
+   <TextView style="@style/Sops.EtiquetaDato" android:text="@string/dosis_medicamento" android:labelFor="@id/etDosisMedicamento" />
+   <EditText android:id="@+id/etDosisMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="text" android:maxLength="100" android:importantForAutofill="no" />
+   <TextView style="@style/Sops.EtiquetaDato" android:text="@string/intervalo_medicamento" android:labelFor="@id/etIntervaloMedicamento" />
+   <EditText android:id="@+id/etIntervaloMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="number" android:maxLength="5" android:importantForAutofill="no" />
+   <TextView style="@style/Sops.EtiquetaDato" android:text="@string/inicio_medicamento" android:labelFor="@id/etInicioMedicamento" />
+   <EditText android:id="@+id/etInicioMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="date" android:maxLength="10" android:importantForAutofill="no" android:hint="@string/hint_fecha_vacuna" />
+   <TextView style="@style/Sops.EtiquetaDato" android:text="@string/fin_medicamento" android:labelFor="@id/etFinMedicamento" />
+   <EditText android:id="@+id/etFinMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="date" android:maxLength="10" android:importantForAutofill="no" android:hint="@string/hint_fecha_vacuna" />
+   <TextView style="@style/Sops.EtiquetaDato" android:text="@string/indicaciones_medicamento" android:labelFor="@id/etIndicacionesMedicamento" />
+   <EditText android:id="@+id/etIndicacionesMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:inputType="textMultiLine" android:maxLength="400" android:importantForAutofill="no" />
+   <CheckBox android:id="@+id/cbMedicamentoActivo" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:checked="true" android:text="@string/medicamento_activo" />
+   <TextView android:id="@+id/tvErrorMedicamento" style="@style/Sops.Descripcion" android:text="@string/error_guardar_medicamento" android:visibility="gone" android:accessibilityLiveRegion="polite" />
+   <com.google.android.material.button.MaterialButton android:id="@+id/btnGuardarMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="20dp" android:text="@string/guardar_medicamento" />
+  </LinearLayout>
+ </ScrollView>
+</LinearLayout>

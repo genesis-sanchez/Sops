@@ -60,6 +60,11 @@ public class DetalleMascotaActivity extends BaseActivity {
             intent.putExtra(EXTRA_REGISTRO_DEMO, getIntent().getBooleanExtra(EXTRA_REGISTRO_DEMO, false));
             startActivity(intent);
         });
+        findViewById(R.id.btnMedicamentosMascota).setOnClickListener(view -> {
+            Intent intent = new Intent(this, MedicamentosActivity.class);
+            intent.putExtra(EXTRA_MASCOTA, mascota);
+            startActivity(intent);
+        });
         mostrarFicha();
     }
 
