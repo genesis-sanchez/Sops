@@ -8,12 +8,13 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.annotation.NonNull;
 
-@Database(entities = {Mascota.class, Vacuna.class, VisitaVeterinaria.class, Alimentacion.class},
-        version = 6, exportSchema = true)
+@Database(entities = {Mascota.class, Vacuna.class, VisitaVeterinaria.class, Alimentacion.class, Medicamento.class},
+        version = 7, exportSchema = true)
 public abstract class SopsDatabase extends RoomDatabase {
     private static SopsDatabase instancia;
 
     public abstract MascotaDao mascotaDao();
+    public abstract MedicamentoDao medicamentoDao();
     public abstract VacunaDao vacunaDao();
     public abstract VisitaVeterinariaDao visitaVeterinariaDao();
     public abstract AlimentacionDao alimentacionDao();
@@ -74,11 +75,24 @@ public abstract class SopsDatabase extends RoomDatabase {
         }
     };
 
+    public static final Migration MIGRACION_6_7 = new Migration(6, 7) {
+        @Override public void migrate(@NonNull SupportSQLiteDatabase base) {
+            base.execSQL("CREATE TABLE IF NOT EXISTS medicamentos ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, mascotaId INTEGER NOT NULL, "
+                    + "visitaId INTEGER, nombre TEXT, dosis TEXT, intervaloHoras INTEGER NOT NULL, "
+                    + "fechaInicio TEXT, fechaFin TEXT, indicaciones TEXT, activo INTEGER NOT NULL, "
+                    + "FOREIGN KEY(mascotaId) REFERENCES mascotas(id) ON UPDATE NO ACTION ON DELETE CASCADE, "
+                    + "FOREIGN KEY(visitaId) REFERENCES visitas_veterinarias(id) ON UPDATE NO ACTION ON DELETE SET NULL)");
+            base.execSQL("CREATE INDEX IF NOT EXISTS index_medicamentos_mascotaId ON medicamentos(mascotaId)");
+            base.execSQL("CREATE INDEX IF NOT EXISTS index_medicamentos_visitaId ON medicamentos(visitaId)");
+        }
+    };
+
     public static synchronized SopsDatabase obtenerInstancia(Context contexto) {
         if (instancia == null) {
             instancia = Room.databaseBuilder(contexto.getApplicationContext(),
                     SopsDatabase.class, "sops.db")
-                    .addMigrations(MIGRACION_1_2, MIGRACION_2_3, MIGRACION_3_4, MIGRACION_4_5, MIGRACION_5_6).build();
+                    .addMigrations(MIGRACION_1_2, MIGRACION_2_3, MIGRACION_3_4, MIGRACION_4_5, MIGRACION_5_6, MIGRACION_6_7).build();
         }
         return instancia;
     }

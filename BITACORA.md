@@ -306,3 +306,12 @@
 **dificultad:** conservar el acceso a la imagen despues de cerrar la app.
 
 **solucion:** guarde su direccion y conserve el permiso de lectura. la ficha muestra la foto y la base pasa a la version 6.
+
+
+## 25 de noviembre de 2026 - base de datos de medicamentos
+
+**avance:** prepare la entidad de medicamentos, su dao y la tabla en room.
+
+**dificultad:** relacionar cada medicamento con su mascota y una visita opcional.
+
+**solucion:** agregue las relaciones y actualice la base a la version 7. todavia falta conectar las pantallas.
