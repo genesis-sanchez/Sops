@@ -80,6 +80,11 @@ public class MedicamentosActivity extends BaseActivity {
         ((TextView) tarjeta.findViewById(R.id.tvIndicacionesMedicamento)).setText(
                 medicamento.getIndicaciones() == null || medicamento.getIndicaciones().trim().isEmpty()
                         ? getString(R.string.sin_observaciones) : medicamento.getIndicaciones());
+        tarjeta.setOnClickListener(view -> {
+            Intent intent = new Intent(this, DetalleMedicamentoActivity.class);
+            intent.putExtra(DetalleMedicamentoActivity.EXTRA_MEDICAMENTO_ID, medicamento.getId());
+            startActivity(intent);
+        });
         registros.addView(tarjeta);
     }
 }

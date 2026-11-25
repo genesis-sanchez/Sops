@@ -324,3 +324,21 @@
 **dificultad:** guardar cada tratamiento en la mascota correcta y revisar las fechas.
 
 **solucion:** use su id para guardar y consultar. valide las horas y que la fecha de fin no sea anterior al inicio.
+
+
+## 25 de noviembre de 2026 - detalle de medicamento
+
+**avance:** agregue el detalle del medicamento desde su tarjeta.
+
+**dificultad:** abrir el tratamiento seleccionado de cada mascota.
+
+**solucion:** pase el id con un intent y consulte sus datos en room.
+
+
+## 25 de noviembre de 2026 - editar y eliminar medicamentos
+
+**avance:** agregue editar y eliminar desde el detalle del medicamento.
+
+**dificultad:** actualizar el mismo tratamiento sin duplicarlo.
+
+**solucion:** use su id para guardar y pedi confirmacion antes de eliminar. la lista se actualiza al regresar.

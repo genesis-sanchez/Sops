@@ -162,4 +162,4 @@ El panel de Inicio muestra el total de mascotas, las vacunas programadas y las p
 
 La foto de la mascota es opcional. Se elige con el selector de archivos del celular y se conserva al guardar. Si se quita la foto o el archivo deja de estar disponible, se muestra la huella de Sops.
 
-Desde la ficha de cada mascota se abre Medicamentos. El formulario guarda nombre, dosis, intervalo en horas, fechas de inicio y fin e indicaciones. La lista se actualiza al regresar y muestra solo los medicamentos de esa mascota. Todavía falta agregar detalle, edición, eliminación y avisos.
+Desde la ficha de cada mascota se abre Medicamentos. El formulario guarda nombre, dosis, intervalo en horas, fechas de inicio y fin e indicaciones. La lista se actualiza al regresar y muestra solo los medicamentos de esa mascota. Al tocar una tarjeta se abre su detalle con la mascota, dosis, intervalo, fechas, indicaciones y estado. Desde el detalle también se puede editar el mismo registro o eliminarlo con confirmación. Los avisos siguen pendientes.

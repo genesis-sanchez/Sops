@@ -309,4 +309,17 @@
     <string name="error_fecha_medicamento">ingresa una fecha valida: dd/mm/aaaa.</string>
     <string name="error_fin_medicamento">la fecha de fin no puede ser anterior al inicio.</string>
     <string name="resumen_medicamento_guardado">dosis: %1$s\ncada %2$d horas\ninicio: %3$s\nfin: %4$s</string>
+    <string name="detalle_medicamento_titulo">detalle de medicamento</string>
+    <string name="medicamento_no_encontrado">este medicamento ya no esta disponible.</string>
+    <string name="error_cargar_detalle_medicamento">no se pudo cargar el medicamento. vuelve a abrirlo.</string>
+    <string name="intervalo_medicamento_guardado">cada %1$d horas</string>
+    <string name="medicamento_estado_activo">activo</string>
+    <string name="medicamento_estado_inactivo">inactivo</string>
+    <string name="indicaciones_detalle_medicamento">indicaciones</string>
+    <string name="editar_medicamento">editar medicamento</string>
+    <string name="eliminar_medicamento">eliminar medicamento</string>
+    <string name="confirmar_eliminar_medicamento">¿eliminar el registro de %1$s?</string>
+    <string name="medicamento_actualizado">medicamento actualizado</string>
+    <string name="medicamento_eliminado">medicamento eliminado</string>
+    <string name="error_eliminar_medicamento">no se pudo eliminar el medicamento. intenta otra vez.</string>
 </resources>

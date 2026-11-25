@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/contenedorPantalla"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+ <include layout="@layout/barra_superior" />
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+   <TextView android:id="@+id/tvEstadoCargaMedicamento" style="@style/Sops.Descripcion" android:text="@string/cargando_medicamentos" android:accessibilityLiveRegion="polite" />
+   <LinearLayout android:id="@+id/contenedorDetalleMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+    <TextView android:id="@+id/tvNombreDetalleMedicamento" style="@style/Sops.TituloSeccion" android:textSize="28sp" />
+    <TextView android:id="@+id/tvMascotaDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="8dp" />
+    <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+      <TextView style="@style/Sops.EtiquetaDato" android:text="@string/dosis_medicamento" />
+      <TextView android:id="@+id/tvDosisDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+      <TextView style="@style/Sops.EtiquetaDato" android:text="@string/intervalo_medicamento" />
+      <TextView android:id="@+id/tvIntervaloDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+      <TextView style="@style/Sops.EtiquetaDato" android:text="@string/inicio_medicamento" />
+      <TextView android:id="@+id/tvInicioDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+      <TextView style="@style/Sops.EtiquetaDato" android:text="@string/fin_medicamento" />
+      <TextView android:id="@+id/tvFinDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+      <TextView style="@style/Sops.EtiquetaDato" android:text="@string/indicaciones_detalle_medicamento" />
+      <TextView android:id="@+id/tvIndicacionesDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+      <TextView style="@style/Sops.EtiquetaDato" android:text="@string/estado_alimentacion_label" />
+      <TextView android:id="@+id/tvEstadoDetalleMedicamento" style="@style/Sops.Descripcion" android:layout_marginTop="4dp" />
+     </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnEditarMedicamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="20dp" android:text="@string/editar_medicamento" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnEliminarMedicamento" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:textColor="?attr/colorError" android:text="@string/eliminar_medicamento" />
+   </LinearLayout>
+  </LinearLayout>
+ </ScrollView>
+</LinearLayout>
