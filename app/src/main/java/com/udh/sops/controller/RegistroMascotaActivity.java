@@ -3,6 +3,9 @@ package com.udh.sops.controller;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import com.udh.sops.view.FotoMascota;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -31,6 +34,23 @@ public class RegistroMascotaActivity extends BaseActivity {
     private TextView error;
     private Calendar nacimiento;
     private Mascota mascotaEditar;
+    private String fotoUri;
+    private final ActivityResultLauncher<String[]> elegirFoto = registerForActivityResult(
+            new ActivityResultContracts.OpenDocument(), uri -> {
+                if (uri == null) return;
+                try {
+                    getContentResolver().takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    fotoUri = uri.toString();
+                    mostrarFoto();
+                } catch (SecurityException exception) {
+                    Toast.makeText(this, R.string.error_elegir_foto, Toast.LENGTH_SHORT).show();
+                }
+            });
+
+    private void mostrarFoto() {
+        FotoMascota.mostrar(findViewById(R.id.ivFotoRegistro), fotoUri);
+        findViewById(R.id.btnQuitarFoto).setVisibility(fotoUri == null ? View.GONE : View.VISIBLE);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +59,11 @@ public class RegistroMascotaActivity extends BaseActivity {
         if (mascotaEditar != null && mascotaEditar.getId() <= 0) { finish(); return; }
         prepararPantalla(R.layout.activity_registro_mascota, mascotaEditar == null
                 ? R.string.title_registro_mascota : R.string.editar_mascota);
+        fotoUri = savedInstanceState != null ? savedInstanceState.getString("fotoUri")
+                : mascotaEditar == null ? null : mascotaEditar.getFotoUri();
+        mostrarFoto();
+        findViewById(R.id.btnElegirFoto).setOnClickListener(view -> elegirFoto.launch(new String[]{"image/*"}));
+        findViewById(R.id.btnQuitarFoto).setOnClickListener(view -> { fotoUri = null; mostrarFoto(); });
         nombre = findViewById(R.id.etNombre);
         raza = findViewById(R.id.etRaza);
         peso = findViewById(R.id.etPeso);
@@ -146,6 +171,7 @@ public class RegistroMascotaActivity extends BaseActivity {
                 especie.getSelectedItem().toString(), raza.getText().toString().trim(), edad,
                 sexoElegido, ((CheckBox) findViewById(R.id.cbEsterilizado)).isChecked(),
                 fecha.getText().toString(), peso.getText().toString().trim());
+        mascota.setFotoUri(fotoUri);
         guardarMascota(mascota);
     }
 
@@ -192,6 +218,7 @@ public class RegistroMascotaActivity extends BaseActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("fotoUri", fotoUri);
         if (nacimiento != null) outState.putLong(ESTADO_FECHA, nacimiento.getTimeInMillis());
         super.onSaveInstanceState(outState);
     }

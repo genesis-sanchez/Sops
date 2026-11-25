@@ -284,4 +284,8 @@
     <string name="cuidado_hoy">hoy</string>
     <string name="cuidado_proximo">proximo</string>
     <string name="fecha_cuidado_inicio">%1$s: %2$s</string>
+    <string name="foto_mascota">foto de la mascota</string>
+    <string name="elegir_foto">elegir foto</string>
+    <string name="quitar_foto">quitar foto</string>
+    <string name="error_elegir_foto">no se pudo abrir la foto. elige otra.</string>
 </resources>

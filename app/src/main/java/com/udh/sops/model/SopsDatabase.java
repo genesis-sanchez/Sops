@@ -9,7 +9,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.annotation.NonNull;
 
 @Database(entities = {Mascota.class, Vacuna.class, VisitaVeterinaria.class, Alimentacion.class},
-        version = 5, exportSchema = true)
+        version = 6, exportSchema = true)
 public abstract class SopsDatabase extends RoomDatabase {
     private static SopsDatabase instancia;
 
@@ -68,11 +68,17 @@ public abstract class SopsDatabase extends RoomDatabase {
         }
     };
 
+    public static final Migration MIGRACION_5_6 = new Migration(5, 6) {
+        @Override public void migrate(@NonNull SupportSQLiteDatabase base) {
+            base.execSQL("ALTER TABLE mascotas ADD COLUMN fotoUri TEXT");
+        }
+    };
+
     public static synchronized SopsDatabase obtenerInstancia(Context contexto) {
         if (instancia == null) {
             instancia = Room.databaseBuilder(contexto.getApplicationContext(),
                     SopsDatabase.class, "sops.db")
-                    .addMigrations(MIGRACION_1_2, MIGRACION_2_3, MIGRACION_3_4, MIGRACION_4_5).build();
+                    .addMigrations(MIGRACION_1_2, MIGRACION_2_3, MIGRACION_3_4, MIGRACION_4_5, MIGRACION_5_6).build();
         }
         return instancia;
     }

@@ -17,6 +17,10 @@ public class Mascota implements Serializable {
     private boolean esterilizado;
     private String fechaNacimiento;
     private String peso;
+    private String fotoUri;
+
+    public String getFotoUri() { return fotoUri; }
+    public void setFotoUri(String fotoUri) { this.fotoUri = fotoUri; }
 
     public long getId() { return id; }
 

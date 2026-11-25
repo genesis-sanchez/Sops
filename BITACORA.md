@@ -297,3 +297,12 @@
 **dificultad:** los accesos ya estaban en la barra superior.
 
 **solucion:** deje la tarjeta con el total de mascotas y los accesos en los iconos.
+
+
+## 25 de noviembre de 2026 - foto de mascota
+
+**avance:** agregue la opcion de elegir, cambiar y quitar la foto al registrar o editar una mascota.
+
+**dificultad:** conservar el acceso a la imagen despues de cerrar la app.
+
+**solucion:** guarde su direccion y conserve el permiso de lectura. la ficha muestra la foto y la base pasa a la version 6.

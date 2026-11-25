@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.udh.sops.R;
@@ -34,6 +35,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     @Override
     public void onBindViewHolder(@NonNull MascotaViewHolder holder, int position) {
         Mascota mascota = mascotas.get(position);
+        FotoMascota.mostrar(holder.foto, mascota.getFotoUri());
         holder.nombre.setText(mascota.getNombre());
         holder.raza.setText(mascota.getRaza());
         holder.resumen.setText(holder.itemView.getContext().getString(
@@ -47,12 +49,14 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     }
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
+        private final ImageView foto;
         private final TextView nombre;
         private final TextView raza;
         private final TextView resumen;
 
         public MascotaViewHolder(@NonNull View itemView) {
             super(itemView);
+            foto = itemView.findViewById(R.id.ivFotoMascota);
             nombre = itemView.findViewById(R.id.tvNombreMascota);
             raza = itemView.findViewById(R.id.tvRazaMascota);
             resumen = itemView.findViewById(R.id.tvResumenMascota);

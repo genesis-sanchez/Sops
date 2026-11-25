@@ -8,6 +8,14 @@
         android:layout_weight="1" android:fillViewport="true">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="vertical" android:padding="24dp">
+            <ImageView android:id="@+id/ivFotoRegistro" android:layout_width="140dp" android:layout_height="140dp"
+                android:layout_gravity="center_horizontal" android:scaleType="centerCrop" android:contentDescription="@string/foto_mascota" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnElegirFoto"
+                style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/elegir_foto" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnQuitarFoto"
+                style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/quitar_foto" />
             <TextView style="@style/Sops.TituloSeccion" android:text="@string/registro_intro" />
             <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp"
                 android:text="@string/registro_aviso" />

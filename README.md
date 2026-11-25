@@ -11,6 +11,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Ver el total de mascotas registradas en Inicio.
 - Ver la lista de mascotas y abrir la ficha de cada una.
 - Registrar y guardar una mascota en el celular.
+- Elegir, cambiar o quitar su foto desde el formulario y verla en su ficha.
 - Editar sus datos o eliminar su ficha con confirmación.
 - Guardar vacunas y consultar las que pertenecen a cada mascota.
 - Abrir el detalle de una vacuna para ver sus fechas, veterinario y observaciones.
@@ -158,3 +159,5 @@ Desde el detalle de alimentación se puede editar el registro usando el mismo fo
 
 
 El panel de Inicio muestra el total de mascotas, las vacunas programadas y las próximas revisiones. Los cuidados se ordenan por fecha e indican si están vencidos, corresponden a hoy o son próximos. Las fechas que no se pueden interpretar aparecen para revisión. Tocar el cuidado abre su detalle y tocar el nombre abre la ficha de la mascota. El panel se actualiza al regresar y muestra un mensaje cuando no hay registros programados.
+
+La foto de la mascota es opcional. Se elige con el selector de archivos del celular y se conserva al guardar. Si se quita la foto o el archivo deja de estar disponible, se muestra la huella de Sops.

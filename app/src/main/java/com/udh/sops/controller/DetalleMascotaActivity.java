@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Toast;
 import androidx.core.content.IntentCompat;
 import com.udh.sops.R;
+import com.udh.sops.view.FotoMascota;
 import com.udh.sops.model.Mascota;
 import com.udh.sops.model.SopsDatabase;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -117,6 +118,7 @@ public class DetalleMascotaActivity extends BaseActivity {
     }
 
     private void mostrarFicha() {
+        FotoMascota.mostrar(findViewById(R.id.ivFotoDetalle), mascota.getFotoUri());
         mostrar(R.id.tvNombreDetalle, mascota.getNombre());
         mostrar(R.id.tvRazaDetalle, mascota.getRaza());
         mostrar(R.id.tvEspecieDetalle, mascota.getTipo());
