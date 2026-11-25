@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sops">
         <activity android:name=".controller.DetalleMedicamentoActivity" android:exported="false" />
+        <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.archivos" android:exported="false" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/archivos_compartidos" />
+        </provider>
         <activity android:name=".controller.MedicamentosActivity" android:exported="false" />
         <activity android:name=".controller.RegistroMedicamentoActivity" android:exported="false" android:windowSoftInputMode="adjustResize" />
         <activity android:name=".controller.DetalleVacunaActivity" android:exported="false" />

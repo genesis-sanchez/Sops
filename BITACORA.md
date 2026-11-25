@@ -342,3 +342,12 @@
 **dificultad:** actualizar el mismo tratamiento sin duplicarlo.
 
 **solucion:** use su id para guardar y pedi confirmacion antes de eliminar. la lista se actualiza al regresar.
+
+
+## 25 de noviembre de 2026 - historial completo y PDF
+
+**avance:** reuni vacunas, visitas y medicamentos por fecha en el historial de cada mascota. agregue guardar y compartir el PDF.
+
+**dificultad:** ordenar los registros y distribuir textos largos en varias paginas.
+
+**solucion:** consulte los datos de la mascota, ordene por fecha y dividi el PDF cuando se completa una pagina. tambien comprobe elegir, guardar y quitar la foto en el emulador.

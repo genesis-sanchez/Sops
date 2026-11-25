@@ -322,4 +322,11 @@
     <string name="medicamento_actualizado">medicamento actualizado</string>
     <string name="medicamento_eliminado">medicamento eliminado</string>
     <string name="error_eliminar_medicamento">no se pudo eliminar el medicamento. intenta otra vez.</string>
+    <string name="historial_unificado_descripcion">vacunas, visitas y medicamentos, del mas reciente al mas antiguo.</string>
+    <string name="cargando_historial">cargando historial...</string>
+    <string name="error_cargar_historial">no se pudo cargar el historial. vuelve a abrirlo.</string>
+    <string name="exportar_historial">guardar PDF</string>
+    <string name="compartir_historial">compartir PDF</string>
+    <string name="historial_exportado">historial guardado</string>
+    <string name="error_exportar_historial">no se pudo generar el PDF. intenta otra vez.</string>
 </resources>

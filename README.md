@@ -18,6 +18,8 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 - Editar los datos de una vacuna guardada.
 - Eliminar una vacuna con confirmación.
 - Guardar visitas veterinarias y consultarlas en el historial de cada mascota.
+- Consultar vacunas, visitas y medicamentos en un historial ordenado por fecha.
+- Guardar el historial en PDF o compartirlo con otra aplicación.
 - Tocar una visita del historial para abrir su detalle.
 - Editar una visita guardada desde su detalle.
 - Eliminar una visita con confirmación.
@@ -58,6 +60,8 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 
 | Parte de la app | Antes | Ahora |
 | --- | --- | --- |
+| Historial médico | Mostraba las visitas guardadas. | Reúne vacunas, visitas y medicamentos de la mascota, del más reciente al más antiguo. |
+| Exportación | No se podía guardar el historial en un documento. | Permite elegir dónde guardar el PDF y compartirlo desde Android. |
 | Inicio | Mostraba una presentación general de la app. | Muestra el total de mascotas guardadas y lo actualiza al regresar. |
 | Registro de mascotas | Mostraba una ficha sin guardar los datos. | Guarda la mascota en el celular y abre su ficha. |
 | Mis mascotas | Mostraba las cinco mascotas de ejemplo. | Muestra las mascotas guardadas y se actualiza al regresar. |
@@ -163,3 +167,5 @@ El panel de Inicio muestra el total de mascotas, las vacunas programadas y las p
 La foto de la mascota es opcional. Se elige con el selector de archivos del celular y se conserva al guardar. Si se quita la foto o el archivo deja de estar disponible, se muestra la huella de Sops.
 
 Desde la ficha de cada mascota se abre Medicamentos. El formulario guarda nombre, dosis, intervalo en horas, fechas de inicio y fin e indicaciones. La lista se actualiza al regresar y muestra solo los medicamentos de esa mascota. Al tocar una tarjeta se abre su detalle con la mascota, dosis, intervalo, fechas, indicaciones y estado. Desde el detalle también se puede editar el mismo registro o eliminarlo con confirmación. Los avisos siguen pendientes.
+
+En **Historial médico**, cada tarjeta abre el detalle de su registro. **Guardar PDF** permite elegir la carpeta y el nombre del archivo; **Compartir PDF** abre las aplicaciones disponibles. El documento contiene los datos de la mascota y su historial, y agrega páginas cuando hace falta.
