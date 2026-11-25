@@ -351,3 +351,11 @@
 **dificultad:** ordenar los registros y distribuir textos largos en varias paginas.
 
 **solucion:** consulte los datos de la mascota, ordene por fecha y dividi el PDF cuando se completa una pagina. tambien comprobe elegir, guardar y quitar la foto en el emulador.
+
+## 25 de noviembre de 2026 - base de recordatorios
+
+**avance:** prepare la entidad de recordatorios, su dao y la tabla en room.
+
+**dificultad:** relacionar cada recordatorio con su mascota.
+
+**solucion:** agregue la relacion y la migracion a la version 8. compila y la estructura coincide con room. falta conectar las pantallas y los avisos.

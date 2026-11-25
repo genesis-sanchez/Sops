@@ -8,13 +8,14 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 import androidx.annotation.NonNull;
 
-@Database(entities = {Mascota.class, Vacuna.class, VisitaVeterinaria.class, Alimentacion.class, Medicamento.class},
-        version = 7, exportSchema = true)
+@Database(entities = {Mascota.class, Vacuna.class, VisitaVeterinaria.class, Alimentacion.class, Medicamento.class, Recordatorio.class},
+        version = 8, exportSchema = true)
 public abstract class SopsDatabase extends RoomDatabase {
     private static SopsDatabase instancia;
 
     public abstract MascotaDao mascotaDao();
     public abstract MedicamentoDao medicamentoDao();
+    public abstract RecordatorioDao recordatorioDao();
     public abstract VacunaDao vacunaDao();
     public abstract VisitaVeterinariaDao visitaVeterinariaDao();
     public abstract AlimentacionDao alimentacionDao();
@@ -88,11 +89,21 @@ public abstract class SopsDatabase extends RoomDatabase {
         }
     };
 
+    public static final Migration MIGRACION_7_8 = new Migration(7, 8) {
+        @Override public void migrate(@NonNull SupportSQLiteDatabase base) {
+            base.execSQL("CREATE TABLE IF NOT EXISTS recordatorios ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, mascotaId INTEGER NOT NULL, "
+                    + "titulo TEXT, descripcion TEXT, fechaHora INTEGER NOT NULL, activo INTEGER NOT NULL, "
+                    + "FOREIGN KEY(mascotaId) REFERENCES mascotas(id) ON UPDATE NO ACTION ON DELETE CASCADE)");
+            base.execSQL("CREATE INDEX IF NOT EXISTS index_recordatorios_mascotaId ON recordatorios(mascotaId)");
+        }
+    };
+
     public static synchronized SopsDatabase obtenerInstancia(Context contexto) {
         if (instancia == null) {
             instancia = Room.databaseBuilder(contexto.getApplicationContext(),
                     SopsDatabase.class, "sops.db")
-                    .addMigrations(MIGRACION_1_2, MIGRACION_2_3, MIGRACION_3_4, MIGRACION_4_5, MIGRACION_5_6, MIGRACION_6_7).build();
+                    .addMigrations(MIGRACION_1_2, MIGRACION_2_3, MIGRACION_3_4, MIGRACION_4_5, MIGRACION_5_6, MIGRACION_6_7, MIGRACION_7_8).build();
         }
         return instancia;
     }

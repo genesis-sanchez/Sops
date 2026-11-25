@@ -169,3 +169,5 @@ La foto de la mascota es opcional. Se elige con el selector de archivos del celu
 Desde la ficha de cada mascota se abre Medicamentos. El formulario guarda nombre, dosis, intervalo en horas, fechas de inicio y fin e indicaciones. La lista se actualiza al regresar y muestra solo los medicamentos de esa mascota. Al tocar una tarjeta se abre su detalle con la mascota, dosis, intervalo, fechas, indicaciones y estado. Desde el detalle también se puede editar el mismo registro o eliminarlo con confirmación. Los avisos siguen pendientes.
 
 En **Historial médico**, cada tarjeta abre el detalle de su registro. **Guardar PDF** permite elegir la carpeta y el nombre del archivo; **Compartir PDF** abre las aplicaciones disponibles. El documento contiene los datos de la mascota y su historial, y agrega páginas cuando hace falta.
+
+Se preparó la base de los recordatorios, con título, descripción, fecha y hora para cada mascota. Todavía falta agregar sus pantallas y activar los avisos.
