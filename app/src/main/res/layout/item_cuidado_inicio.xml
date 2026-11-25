@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="12dp" android:layout_marginTop="12dp"
+    android:clickable="true" android:focusable="true" android:background="?attr/selectableItemBackground">
+    <TextView android:id="@+id/tvTituloCuidado" style="@style/Sops.ValorDato" />
+    <TextView android:id="@+id/tvFechaCuidado" style="@style/Sops.Descripcion" android:layout_marginTop="6dp" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnMascotaCuidado"
+        style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:minHeight="48dp" />
+</LinearLayout>

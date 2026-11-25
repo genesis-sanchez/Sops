@@ -15,6 +15,9 @@ public interface MascotaDao {
     @Query("SELECT * FROM mascotas ORDER BY id DESC")
     List<Mascota> obtenerTodas();
 
+    @Query("SELECT COUNT(*) FROM mascotas")
+    int obtenerTotal();
+
     @Query("SELECT * FROM mascotas WHERE id = :id")
     Mascota obtenerPorId(long id);
 

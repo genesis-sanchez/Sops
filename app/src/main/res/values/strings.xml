@@ -1,4 +1,9 @@
 <resources>
+    <plurals name="total_mascotas_inicio">
+        <item quantity="one">%1$d mascota registrada</item>
+        <item quantity="other">%1$d mascotas registradas</item>
+    </plurals>
+    <string name="error_total_mascotas">no se pudo consultar el total. vuelve a inicio.</string>
     <string name="eliminar_vacuna">eliminar vacuna</string>
     <string name="confirmar_eliminar_vacuna">¿eliminar la vacuna %1$s?</string>
     <string name="vacuna_eliminada">vacuna eliminada</string>
@@ -268,4 +273,15 @@
     <string name="confirmar_eliminar_alimentacion">¿eliminar el registro de %1$s?</string>
     <string name="alimentacion_eliminada">registro eliminado</string>
     <string name="error_eliminar_alimentacion">no se pudo eliminar el registro. intenta otra vez.</string>
+    <string name="vacunas_pendientes_inicio">vacunas pendientes</string>
+    <string name="revisiones_pendientes_inicio">revisiones pendientes</string>
+    <string name="cargando_cuidados">cargando cuidados...</string>
+    <string name="sin_vacunas_inicio">no hay vacunas programadas.</string>
+    <string name="sin_revisiones_inicio">no hay revisiones programadas.</string>
+    <string name="error_cargar_resumen">no se pudo cargar el resumen. vuelve a inicio.</string>
+    <string name="cuidado_revisar_fecha">revisar fecha</string>
+    <string name="cuidado_vencido">vencido</string>
+    <string name="cuidado_hoy">hoy</string>
+    <string name="cuidado_proximo">proximo</string>
+    <string name="fecha_cuidado_inicio">%1$s: %2$s</string>
 </resources>

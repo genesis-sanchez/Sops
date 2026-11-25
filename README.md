@@ -8,6 +8,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 
 ## Funciones desarrolladas
 
+- Ver el total de mascotas registradas en Inicio.
 - Ver la lista de mascotas y abrir la ficha de cada una.
 - Registrar y guardar una mascota en el celular.
 - Editar sus datos o eliminar su ficha con confirmación.
@@ -26,7 +27,7 @@ Este repositorio reúne el proyecto, las capturas de sus pantallas y la bitácor
 
 ## Funcionamiento
 
-Desde **Inicio → Ver mis mascotas** se puede seleccionar una mascota y consultar su ficha. Allí se encuentran los accesos a vacunas, historial médico y alimentación. Cada sección cuenta con un botón para abrir su formulario.
+Desde **Inicio → icono de la huella** se puede seleccionar una mascota y consultar su ficha. Allí se encuentran los accesos a vacunas, historial médico y alimentación. Cada sección cuenta con un botón para abrir su formulario.
 
 En la ficha de una mascota guardada, **editar mascota** abre el formulario con sus datos. **Eliminar mascota** pide confirmar antes de borrar el registro y regresar a la lista.
 
@@ -56,6 +57,7 @@ Primero se preparó la base de datos de mascotas. Después se conectó el formul
 
 | Parte de la app | Antes | Ahora |
 | --- | --- | --- |
+| Inicio | Mostraba una presentación general de la app. | Muestra el total de mascotas guardadas y lo actualiza al regresar. |
 | Registro de mascotas | Mostraba una ficha sin guardar los datos. | Guarda la mascota en el celular y abre su ficha. |
 | Mis mascotas | Mostraba las cinco mascotas de ejemplo. | Muestra las mascotas guardadas y se actualiza al regresar. |
 | Editar mascota | No había una opción para cambiar sus datos. | Abre el formulario con los datos actuales y guarda los cambios en el mismo registro. |
@@ -153,3 +155,6 @@ Estas capturas muestran el registro, la consulta, la edición y la eliminación 
 El resto de las imágenes está en la [carpeta de capturas del Hito 2](evidencias/capturas/hito2/). El video del recorrido incluye la escritura de los formularios y una breve explicación en pantalla de la organización del código. Se adjunta por separado en Classroom.
 
 Desde el detalle de alimentación se puede editar el registro usando el mismo formulario. Al eliminar, se pide confirmación y se regresa a la lista actualizada.
+
+
+El panel de Inicio muestra el total de mascotas, las vacunas programadas y las próximas revisiones. Los cuidados se ordenan por fecha e indican si están vencidos, corresponden a hoy o son próximos. Las fechas que no se pueden interpretar aparecen para revisión. Tocar el cuidado abre su detalle y tocar el nombre abre la ficha de la mascota. El panel se actualiza al regresar y muestra un mensaje cuando no hay registros programados.

@@ -271,3 +271,29 @@
 **dificultad:** actualizar el mismo registro y borrar solo el elegido.
 
 **solucion:** use su id para guardar los cambios y agregue una confirmacion antes de eliminar.
+
+## 24 de noviembre de 2026 - total de mascotas en inicio
+
+**avance:** agregue el total de mascotas registradas en el inicio.
+
+**dificultad:** mantener el numero actualizado al regresar.
+
+**solucion:** consulte el total en room cada vez que se abre el inicio.
+
+
+## 25 de noviembre de 2026 - panel de inicio
+
+**avance:** agregue vacunas y revisiones pendientes al inicio, junto al total de mascotas.
+
+**dificultad:** ordenar las fechas y abrir el registro correcto.
+
+**solucion:** consulte los datos guardados y ordene los cuidados por fecha. cada tarjeta abre su detalle y el nombre abre la ficha de la mascota.
+
+
+## 25 de noviembre de 2026 - ajuste del inicio
+
+**avance:** quite los botones de ver mascotas y registrar del inicio.
+
+**dificultad:** los accesos ya estaban en la barra superior.
+
+**solucion:** deje la tarjeta con el total de mascotas y los accesos en los iconos.

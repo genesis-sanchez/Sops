@@ -8,21 +8,23 @@
             <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
                     <TextView style="@style/Sops.TituloSeccion" android:text="@string/inicio_mascotas_titulo" />
-                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp" android:text="@string/inicio_mascotas_descripcion" />
-                    <com.google.android.material.button.MaterialButton android:id="@+id/btnVerMascotas" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:minHeight="48dp" android:text="@string/btn_ver_mascotas" />
-                    <com.google.android.material.button.MaterialButton android:id="@+id/btnRegistrarMascota" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/btn_ir_registro" />
+                    <TextView android:id="@+id/tvTotalMascotas" style="@style/Sops.Descripcion"
+                        android:layout_marginTop="8dp" android:textSize="22sp" android:textStyle="bold"
+                        android:accessibilityLiveRegion="polite" android:text="@string/cargando_mascotas" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/inicio_vacunas_titulo" />
-                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp" android:text="@string/inicio_vacunas_descripcion" />
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/vacunas_pendientes_inicio" />
+                    <TextView android:id="@+id/tvEstadoVacunasInicio" style="@style/Sops.Descripcion" android:layout_marginTop="8dp" android:text="@string/cargando_cuidados" />
+                    <LinearLayout android:id="@+id/contenedorVacunasInicio" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
             <com.google.android.material.card.MaterialCardView style="@style/Sops.Tarjeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/inicio_cuidados_titulo" />
-                    <TextView style="@style/Sops.Descripcion" android:layout_marginTop="8dp" android:text="@string/inicio_cuidados_descripcion" />
+                    <TextView style="@style/Sops.TituloSeccion" android:text="@string/revisiones_pendientes_inicio" />
+                    <TextView android:id="@+id/tvEstadoRevisionesInicio" style="@style/Sops.Descripcion" android:layout_marginTop="8dp" android:text="@string/cargando_cuidados" />
+                    <LinearLayout android:id="@+id/contenedorRevisionesInicio" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>

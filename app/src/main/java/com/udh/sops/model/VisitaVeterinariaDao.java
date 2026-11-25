@@ -9,6 +9,9 @@ import java.util.List;
 
 @Dao
 public interface VisitaVeterinariaDao {
+    @Query("SELECT * FROM visitas_veterinarias ORDER BY id DESC")
+    List<VisitaVeterinaria> obtenerTodas();
+
     @Insert
     long insertar(VisitaVeterinaria visita);
 
